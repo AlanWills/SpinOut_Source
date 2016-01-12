@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>SpinOut</RootNamespace>
+    <ProjectGuid>{BF31F6B4-EF3B-4596-AB04-4B1DC86425F6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\alawi\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\Asphalt road;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\Asphalt road;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\Asphalt road;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\Asphalt road;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AddTextBoxScript.h" />
+    <ClInclude Include="AICar.h" />
+    <ClInclude Include="Bar.h" />
+    <ClInclude Include="BaseData.h" />
+    <ClInclude Include="BaseObject.h" />
+    <ClInclude Include="BaseObjectManager.h" />
+    <ClInclude Include="BaseScreen.h" />
+    <ClInclude Include="BaseScreenData.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="CarData.h" />
+    <ClInclude Include="CarDescriptionUI.h" />
+    <ClInclude Include="CircleCollider.h" />
+    <ClInclude Include="ClickableImage.h" />
+    <ClInclude Include="Collider.h" />
+    <ClInclude Include="ChooseDrivingLessonScreen.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameMouse.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameplayScreen.h" />
+    <ClInclude Include="GarageScreen.h" />
+    <ClInclude Include="GenericUtils.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="KeyboardInput.h" />
+    <ClInclude Include="Label.h" />
+    <ClInclude Include="Lesson1RacetrackScreen.h" />
+    <ClInclude Include="Lesson2RacetrackScreen.h" />
+    <ClInclude Include="Lesson3RacetrackScreen.h" />
+    <ClInclude Include="LevelDesignDecal.h" />
+    <ClInclude Include="LevelDesignObject.h" />
+    <ClInclude Include="LevelDesignScreen.h" />
+    <ClInclude Include="LevelDesignScreenData.h" />
+    <ClInclude Include="LevelDesignStartingPosition.h" />
+    <ClInclude Include="LevelDesignTile.h" />
+    <ClInclude Include="MainMenuScreen.h" />
+    <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MouseButton.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="PlayerCar.h" />
+    <ClInclude Include="PlayerData.h" />
+    <ClInclude Include="RacetrackDescriptionUI.h" />
+    <ClInclude Include="RacetrackScreenFactory.h" />
+    <ClInclude Include="RacetrackScreen.h" />
+    <ClInclude Include="RacetrackScreenData.h" />
+    <ClInclude Include="RacetrackLevelDesignScreen.h" />
+    <ClInclude Include="RacetrackLevelDesignScreenData.h" />
+    <ClInclude Include="RectangleCollider.h" />
+    <ClInclude Include="RigidBody.h" />
+    <ClInclude Include="ScreenManager.h" />
+    <ClInclude Include="Script.h" />
+    <ClInclude Include="ScriptManager.h" />
+    <ClInclude Include="StepTimer.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="Texture2D.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="Tilemap.h" />
+    <ClInclude Include="TilemapData.h" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="TouchInput.h" />
+    <ClInclude Include="TransitionOnEnterScript.h" />
+    <ClInclude Include="UIObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddTextBoxScript.cpp" />
+    <ClCompile Include="AICar.cpp" />
+    <ClCompile Include="Bar.cpp" />
+    <ClCompile Include="BaseData.cpp" />
+    <ClCompile Include="BaseObject.cpp" />
+    <ClCompile Include="BaseScreen.cpp" />
+    <ClCompile Include="BaseScreenData.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="CarData.cpp" />
+    <ClCompile Include="CarDescriptionUI.cpp" />
+    <ClCompile Include="CircleCollider.cpp" />
+    <ClCompile Include="ClickableImage.cpp" />
+    <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="ChooseDrivingLessonScreen.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameMouse.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameplayScreen.cpp" />
+    <ClCompile Include="GarageScreen.cpp" />
+    <ClCompile Include="GenericUtils.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="KeyboardInput.cpp" />
+    <ClCompile Include="Label.cpp" />
+    <ClCompile Include="Lesson1RacetrackScreen.cpp" />
+    <ClCompile Include="Lesson2RacetrackScreen.cpp" />
+    <ClCompile Include="Lesson3RacetrackScreen.cpp" />
+    <ClCompile Include="LevelDesignDecal.cpp" />
+    <ClCompile Include="LevelDesignObject.cpp" />
+    <ClCompile Include="LevelDesignScreen.cpp" />
+    <ClCompile Include="LevelDesignScreenData.cpp" />
+    <ClCompile Include="LevelDesignStartingPosition.cpp" />
+    <ClCompile Include="LevelDesignTile.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainMenuScreen.cpp" />
+    <ClCompile Include="MathUtils.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PlayerCar.cpp" />
+    <ClCompile Include="PlayerData.cpp" />
+    <ClCompile Include="RacetrackDescriptionUI.cpp" />
+    <ClCompile Include="RacetrackScreenFactory.cpp" />
+    <ClCompile Include="RacetrackScreen.cpp" />
+    <ClCompile Include="RacetrackScreenData.cpp" />
+    <ClCompile Include="RacetrackLevelDesignScreen.cpp" />
+    <ClCompile Include="RacetrackLevelDesignScreenData.cpp" />
+    <ClCompile Include="RectangleCollider.cpp" />
+    <ClCompile Include="RigidBody.cpp" />
+    <ClCompile Include="ScreenManager.cpp" />
+    <ClCompile Include="Script.cpp" />
+    <ClCompile Include="ScriptManager.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="Texture2D.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="Tilemap.cpp" />
+    <ClCompile Include="TilemapData.cpp" />
+    <ClCompile Include="tinyxml2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TouchInput.cpp" />
+    <ClCompile Include="TransitionOnEnterScript.cpp" />
+    <ClCompile Include="UIObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="arrow_white.png" />
+    <Image Include="arrow_yellow.png" />
+    <Image Include="barrel_blue.png" />
+    <Image Include="barrel_blue_down.png" />
+    <Image Include="barrel_red.png" />
+    <Image Include="barrel_red_down.png" />
+    <Image Include="barrier_red.png" />
+    <Image Include="barrier_red_race.png" />
+    <Image Include="barrier_white.png" />
+    <Image Include="barrier_white_race.png" />
+    <Image Include="Button.png" />
+    <Image Include="car_blue_small_1.png" />
+    <Image Include="cone_down.png" />
+    <Image Include="cone_straight.png" />
+    <Image Include="cursor_blue.png" />
+    <Image Include="DialogBox.png" />
+    <Image Include="directx.ico" />
+    <Image Include="EmptyBackground.png" />
+    <Image Include="AntiClockwiseRightTurn.png" />
+    <Image Include="ClockwiseLeftTurn.png" />
+    <Image Include="GreenBackground.png" />
+    <Image Include="GridLine.png" />
+    <Image Include="land_grass11.png" />
+    <Image Include="AntiClockwiseLeftTurn.png" />
+    <Image Include="Level1.png" />
+    <Image Include="Lesson1Thumbnail.png" />
+    <Image Include="lights.png" />
+    <Image Include="light_white.png" />
+    <Image Include="light_yellow.png" />
+    <Image Include="Marker.png" />
+    <Image Include="oil.png" />
+    <Image Include="ClockwiseRightTurn.png" />
+    <Image Include="road_asphalt1.png" />
+    <Image Include="road_asphalt10.png" />
+    <Image Include="road_asphalt11.png" />
+    <Image Include="road_asphalt12.png" />
+    <Image Include="road_asphalt13.png" />
+    <Image Include="road_asphalt14.png" />
+    <Image Include="road_asphalt15.png" />
+    <Image Include="road_asphalt16.png" />
+    <Image Include="road_asphalt17.png" />
+    <Image Include="road_asphalt18.png" />
+    <Image Include="road_asphalt19.png" />
+    <Image Include="road_asphalt2.png" />
+    <Image Include="road_asphalt20.png" />
+    <Image Include="road_asphalt21.png" />
+    <Image Include="road_asphalt22.png" />
+    <Image Include="road_asphalt23.png" />
+    <Image Include="road_asphalt24.png" />
+    <Image Include="road_asphalt25.png" />
+    <Image Include="road_asphalt26.png" />
+    <Image Include="road_asphalt27.png" />
+    <Image Include="road_asphalt28.png" />
+    <Image Include="road_asphalt29.png" />
+    <Image Include="road_asphalt3.png" />
+    <Image Include="road_asphalt30.png" />
+    <Image Include="road_asphalt31.png" />
+    <Image Include="road_asphalt32.png" />
+    <Image Include="road_asphalt33.png" />
+    <Image Include="road_asphalt34.png" />
+    <Image Include="road_asphalt35.png" />
+    <Image Include="road_asphalt36.png" />
+    <Image Include="road_asphalt37.png" />
+    <Image Include="road_asphalt38.png" />
+    <Image Include="road_asphalt39.png" />
+    <Image Include="road_asphalt4.png" />
+    <Image Include="road_asphalt40.png" />
+    <Image Include="road_asphalt41.png" />
+    <Image Include="road_asphalt42.png" />
+    <Image Include="road_asphalt43.png" />
+    <Image Include="road_asphalt44.png" />
+    <Image Include="road_asphalt45.png" />
+    <Image Include="road_asphalt46.png" />
+    <Image Include="road_asphalt47.png" />
+    <Image Include="road_asphalt48.png" />
+    <Image Include="road_asphalt49.png" />
+    <Image Include="road_asphalt5.png" />
+    <Image Include="road_asphalt50.png" />
+    <Image Include="road_asphalt51.png" />
+    <Image Include="road_asphalt52.png" />
+    <Image Include="road_asphalt53.png" />
+    <Image Include="road_asphalt54.png" />
+    <Image Include="road_asphalt55.png" />
+    <Image Include="road_asphalt56.png" />
+    <Image Include="road_asphalt57.png" />
+    <Image Include="road_asphalt58.png" />
+    <Image Include="road_asphalt59.png" />
+    <Image Include="road_asphalt6.png" />
+    <Image Include="road_asphalt60.png" />
+    <Image Include="road_asphalt61.png" />
+    <Image Include="road_asphalt62.png" />
+    <Image Include="road_asphalt63.png" />
+    <Image Include="road_asphalt64.png" />
+    <Image Include="road_asphalt65.png" />
+    <Image Include="road_asphalt66.png" />
+    <Image Include="road_asphalt67.png" />
+    <Image Include="road_asphalt68.png" />
+    <Image Include="road_asphalt69.png" />
+    <Image Include="road_asphalt7.png" />
+    <Image Include="road_asphalt70.png" />
+    <Image Include="road_asphalt71.png" />
+    <Image Include="road_asphalt72.png" />
+    <Image Include="road_asphalt73.png" />
+    <Image Include="road_asphalt74.png" />
+    <Image Include="road_asphalt75.png" />
+    <Image Include="road_asphalt76.png" />
+    <Image Include="road_asphalt77.png" />
+    <Image Include="road_asphalt78.png" />
+    <Image Include="road_asphalt79.png" />
+    <Image Include="road_asphalt8.png" />
+    <Image Include="road_asphalt80.png" />
+    <Image Include="road_asphalt81.png" />
+    <Image Include="road_asphalt82.png" />
+    <Image Include="road_asphalt83.png" />
+    <Image Include="road_asphalt84.png" />
+    <Image Include="road_asphalt85.png" />
+    <Image Include="road_asphalt86.png" />
+    <Image Include="road_asphalt87.png" />
+    <Image Include="road_asphalt88.png" />
+    <Image Include="road_asphalt89.png" />
+    <Image Include="road_asphalt9.png" />
+    <Image Include="road_asphalt90.png" />
+    <Image Include="rock1.png" />
+    <Image Include="rock2.png" />
+    <Image Include="rock3.png" />
+    <Image Include="skidmark_long_1.png" />
+    <Image Include="skidmark_long_2.png" />
+    <Image Include="skidmark_long_3.png" />
+    <Image Include="skidmark_short_1.png" />
+    <Image Include="skidmark_short_2.png" />
+    <Image Include="skidmark_short_3.png" />
+    <Image Include="tent_blue.png" />
+    <Image Include="tent_blue_large.png" />
+    <Image Include="tent_red.png" />
+    <Image Include="tent_red_large.png" />
+    <Image Include="tires_red.png" />
+    <Image Include="tires_red_alt.png" />
+    <Image Include="tires_white.png" />
+    <Image Include="tires_white_alt.png" />
+    <Image Include="tree_large.png" />
+    <Image Include="tree_small.png" />
+    <Image Include="tribune_empty.png" />
+    <Image Include="tribune_full.png" />
+    <Image Include="tribune_overhang_red.png" />
+    <Image Include="tribune_overhang_striped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="settings.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="ChooseDrivingLessonScreen.xml" />
+    <Xml Include="Corvette.xml" />
+    <Xml Include="DrivingLessonScreen.xml" />
+    <Xml Include="GarageScreen.xml" />
+    <Xml Include="Lesson1RacetrackScreen.xml" />
+    <Xml Include="Lesson2RacetrackScreen.xml" />
+    <Xml Include="LevelDesignScreen.xml" />
+    <Xml Include="MainMenuScreen.xml" />
+    <Xml Include="RaceScreen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Font.spritefont" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="DirectXTK-master\DirectXTK_Desktop_2015_Win10.vcxproj">
+      <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <DisplayName/>
+    <BackgroundTextureAsset>GreenBackground.png</BackgroundTextureAsset>
+    <NormalTiles>
+        <Item x="1408" y="1280" rotation="0" collider="0">road_asphalt70.png</Item>
+        <Item x="1280" y="1280" rotation="0" collider="0">road_asphalt69.png</Item>
+        <Item x="1536" y="1280" rotation="0" collider="0">road_asphalt71.png</Item>
+        <Item x="1408" y="2048" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1408" y="1664" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1408" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1280" y="1536" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1280" y="1664" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1280" y="1792" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1280" y="1920" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1280" y="2048" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1408" y="1536" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1408" y="1792" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1536" y="1408" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1536" y="1536" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1536" y="1664" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1536" y="1792" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1536" y="1920" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1536" y="2048" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1408" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="2176" rotation="0" collider="0">road_asphalt24.png</Item>
+        <Item x="1536" y="2176" rotation="0" collider="0">road_asphalt25.png</Item>
+        <Item x="1408" y="2176" rotation="0" collider="0">road_asphalt40.png</Item>
+        <Item x="1280" y="1152" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1536" y="1152" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1152" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1024" rotation="0" collider="0">road_asphalt6.png</Item>
+        <Item x="1536" y="1024" rotation="0" collider="0">road_asphalt7.png</Item>
+        <Item x="1408" y="1024" rotation="0" collider="0">road_asphalt4.png</Item>
+    </NormalTiles>
+    <CollisionTiles/>
+    <NormalDecals/>
+    <CollisionDecals/>
+    <StartingPoints>
+        <Item x="1408" y="1920" rotation="0" collider="0">road_asphalt22.png</Item>
+    </StartingPoints>
+    <TrackPoints/>
+    <TrackName>Lesson 1</TrackName>
+    <ThumbnailAsset>Lesson1Thumbnail.png</ThumbnailAsset>
+    <Description>
+               Kick start your driving career here!
+      Learn the basics of handling, acceleration and braking.
+    </Description>
+</Root>

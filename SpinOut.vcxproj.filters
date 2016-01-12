@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Data">
+      <UniqueIdentifier>{b609f26b-dd62-4dc4-83db-df291c01524a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Data\Screens">
+      <UniqueIdentifier>{f2e01268-e427-49d2-bba8-316784074b04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites">
+      <UniqueIdentifier>{dc1866eb-695f-4483-9df8-02f0932935d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\UI">
+      <UniqueIdentifier>{2da258c1-7ab4-4a07-9c20-c78ea8a54586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\Backgrounds">
+      <UniqueIdentifier>{bdc8ee0e-febb-4d85-8a8d-7a9390c82856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Fonts">
+      <UniqueIdentifier>{42a156b9-0d8a-497f-80aa-36d61c6ab9e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{515de7c0-8f98-4903-89ad-e2a7af2d5c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{60111b0e-fbfb-4319-890d-5d2df5972271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\General Object Classes">
+      <UniqueIdentifier>{44a0944d-7a75-4e2c-a536-9d7a3adc6370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{60b400a9-71a6-4936-8813-08ac3fe97185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens">
+      <UniqueIdentifier>{816d15bb-d39b-4041-9ea0-07208152bebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Screens">
+      <UniqueIdentifier>{f1995ff8-f9e7-4f7f-9271-b0866d5fdadb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Extra Components">
+      <UniqueIdentifier>{01cacd64-bb0f-4f10-8f7d-d4adddc62a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{d955f728-b523-4751-b97a-a8e1e9d13019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics\Colliders">
+      <UniqueIdentifier>{76435443-d07a-4114-aa6e-ec67c0f3103e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Extra Components\Input">
+      <UniqueIdentifier>{b0698098-acd5-472f-adaf-7a197f86bb10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{31cafa05-4d06-4da0-9b5e-e82bf993cd8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tilemap">
+      <UniqueIdentifier>{f68c23ba-a832-48cf-8c36-9a0c218dac50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scripts">
+      <UniqueIdentifier>{e773e382-d1fb-4257-b7a4-a78977da6532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Tilemap">
+      <UniqueIdentifier>{8db43bc9-7f35-484c-bd20-cb0b8e8c7281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{e618b016-99b5-4c49-af75-274fbadc1e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Tilemap">
+      <UniqueIdentifier>{85e5cfb6-5922-420a-928e-38ea47047441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Screens">
+      <UniqueIdentifier>{4a4eff64-5a42-45b2-b23b-6f97a6e97bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\General Object Classes">
+      <UniqueIdentifier>{41599736-8700-4214-a322-f97400c849ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{9b170fdb-ce62-4a40-9a8d-cb71fc0c4f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Extra Components">
+      <UniqueIdentifier>{b2e7ba83-0621-4275-b985-a7e0e665b3b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scripts">
+      <UniqueIdentifier>{525d9232-2192-4432-bb3e-4fa8d70c6d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Extra Components\Input">
+      <UniqueIdentifier>{a1eed7da-b4c6-439d-a533-d36a7b4cfede}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tilemap">
+      <UniqueIdentifier>{8cd47976-f2ad-4b49-9563-a2b775d2be43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{20fe1d98-7a5a-4a0a-b51c-eb95ff5c68bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{ae357678-9615-4b06-94d2-0429dbd3a5d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics\Colliders">
+      <UniqueIdentifier>{ea2c664c-b20f-4c8e-b7d6-c02fcb6b30b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Screens">
+      <UniqueIdentifier>{3a159de9-7cd2-4089-b78c-2fe1ba5ed7c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{36cdc718-2a69-4ff4-a1cf-e997a9c7fedb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\Tiles">
+      <UniqueIdentifier>{e9ca644d-2e2e-4702-8034-24ebcda4e58b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\Tiles\AsphaltRoad">
+      <UniqueIdentifier>{9e421df3-800b-4168-86fa-4e31f996a905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\Cars">
+      <UniqueIdentifier>{3df1eebe-9f0c-4ad2-b707-8aac5edbb83e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\Cars\Blue">
+      <UniqueIdentifier>{3affded6-97b9-4eba-9ee5-d487f5fa333f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Racing Objects">
+      <UniqueIdentifier>{29b66477-f64e-4abe-80cd-930947de7686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Racing Objects">
+      <UniqueIdentifier>{fb4a9d70-b494-4c95-a863-2d0739581cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data\Game Objects">
+      <UniqueIdentifier>{5e977f16-ecd0-4713-99e9-66ec174e273b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Game Objects">
+      <UniqueIdentifier>{aa8c3842-29d3-49f9-b448-ba151d5acf59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Data\Cars">
+      <UniqueIdentifier>{34f00475-6e8e-47d9-b7de-e60d68e65984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\Tiles\Objects">
+      <UniqueIdentifier>{e51f4b69-406e-40fb-bc34-c7416f21f5d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\General Object Classes\Game">
+      <UniqueIdentifier>{3081e147-a19a-4dda-9411-e7b5f39e3e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\General Object Classes\Level Design">
+      <UniqueIdentifier>{8021b884-dd58-4f1c-9d74-f1dc501dff7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Data\Tracks">
+      <UniqueIdentifier>{fc580401-4094-4d9e-8acc-920173c0cc64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\General Object Classes\Game">
+      <UniqueIdentifier>{f60320eb-f7ab-400f-a673-f614d097aada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\General Object Classes\Level Design">
+      <UniqueIdentifier>{0e65a91b-bd86-4b3d-9b8f-1a528898e5f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Data\Tracks\Lessons">
+      <UniqueIdentifier>{0665c2c4-fcdc-402d-bb30-3b28729c2b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Generic">
+      <UniqueIdentifier>{f7e4887f-98a8-4e22-b15e-bdf456d9cf6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Game">
+      <UniqueIdentifier>{9b34dba5-f9e4-4946-8bdb-2a811a1f8e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Generic">
+      <UniqueIdentifier>{96e9cea0-9bb6-4c3d-90ea-5e0aa2ca432d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Game">
+      <UniqueIdentifier>{ae9b685a-0c86-4649-8290-f3f2c9f886fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sprites\Racetrack Thumbnails">
+      <UniqueIdentifier>{6429f922-80ac-49be-8c8e-8833e3b137ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Screens\Level Design">
+      <UniqueIdentifier>{a4006bb7-2b4b-498d-8bc3-ea24e1b45398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Screens\Lessons">
+      <UniqueIdentifier>{216f03e2-bda1-4bec-80b3-fd62d77cbe54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens\Level Design">
+      <UniqueIdentifier>{a94e500e-f872-4da7-af0d-2311f2b4e7da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens\Lessons">
+      <UniqueIdentifier>{2e3863a8-6e51-4fbb-8ce0-7ea63e75b51b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Screens\Menus">
+      <UniqueIdentifier>{23300eaf-07fb-480b-982c-eff1ab61277c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens\Menus">
+      <UniqueIdentifier>{43c1ae6b-221f-4bd1-bdda-7cda2b1d26cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StepTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseObjectManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseScreenData.h">
+      <Filter>Header Files\Data\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Extra Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollider.h">
+      <Filter>Header Files\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Header Files\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMouse.h">
+      <Filter>Header Files\Extra Components\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericUtils.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardInput.h">
+      <Filter>Header Files\Extra Components\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseButton.h">
+      <Filter>Header Files\Extra Components\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleCollider.h">
+      <Filter>Header Files\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture2D.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Header Files\Tilemap</Filter>
+    </ClInclude>
+    <ClInclude Include="Tilemap.h">
+      <Filter>Header Files\Tilemap</Filter>
+    </ClInclude>
+    <ClInclude Include="Script.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="TouchInput.h">
+      <Filter>Header Files\Extra Components\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="TilemapData.h">
+      <Filter>Header Files\Data\Tilemap</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelDesignScreenData.h">
+      <Filter>Header Files\Data\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
+      <Filter>Header Files\Racing Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="CarData.h">
+      <Filter>Header Files\Data\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCar.h">
+      <Filter>Header Files\Racing Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseObject.h">
+      <Filter>Header Files\General Object Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\General Object Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObject.h">
+      <Filter>Header Files\General Object Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelDesignDecal.h">
+      <Filter>Header Files\General Object Classes\Level Design</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelDesignObject.h">
+      <Filter>Header Files\General Object Classes\Level Design</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelDesignStartingPosition.h">
+      <Filter>Header Files\General Object Classes\Level Design</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelDesignTile.h">
+      <Filter>Header Files\General Object Classes\Level Design</Filter>
+    </ClInclude>
+    <ClInclude Include="RacetrackLevelDesignScreenData.h">
+      <Filter>Header Files\Data\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="AICar.h">
+      <Filter>Header Files\Racing Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameplayScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="RacetrackScreenData.h">
+      <Filter>Header Files\Data\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="RacetrackScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Bar.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="ClickableImage.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="RacetrackDescriptionUI.h">
+      <Filter>Header Files\UI\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="AddTextBoxScript.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="RacetrackScreenFactory.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelDesignScreen.h">
+      <Filter>Header Files\Screens\Level Design</Filter>
+    </ClInclude>
+    <ClInclude Include="RacetrackLevelDesignScreen.h">
+      <Filter>Header Files\Screens\Level Design</Filter>
+    </ClInclude>
+    <ClInclude Include="Lesson1RacetrackScreen.h">
+      <Filter>Header Files\Screens\Lessons</Filter>
+    </ClInclude>
+    <ClInclude Include="Lesson2RacetrackScreen.h">
+      <Filter>Header Files\Screens\Lessons</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitionOnEnterScript.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Lesson3RacetrackScreen.h">
+      <Filter>Header Files\Screens\Lessons</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseDrivingLessonScreen.h">
+      <Filter>Header Files\Screens\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScreen.h">
+      <Filter>Header Files\Screens\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="GarageScreen.h">
+      <Filter>Header Files\Screens\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="CarDescriptionUI.h">
+      <Filter>Header Files\UI\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseData.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseScreenData.cpp">
+      <Filter>Source Files\Data\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Extra Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollider.cpp">
+      <Filter>Source Files\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Source Files\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleCollider.cpp">
+      <Filter>Source Files\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardInput.cpp">
+      <Filter>Source Files\Extra Components\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMouse.cpp">
+      <Filter>Source Files\Extra Components\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericUtils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture2D.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source Files\Tilemap</Filter>
+    </ClCompile>
+    <ClCompile Include="Tilemap.cpp">
+      <Filter>Source Files\Tilemap</Filter>
+    </ClCompile>
+    <ClCompile Include="TouchInput.cpp">
+      <Filter>Source Files\Extra Components\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="TilemapData.cpp">
+      <Filter>Source Files\Data\Tilemap</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelDesignScreenData.cpp">
+      <Filter>Source Files\Data\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Car.cpp">
+      <Filter>Source Files\Racing Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCar.cpp">
+      <Filter>Source Files\Racing Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="CarData.cpp">
+      <Filter>Source Files\Data\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseObject.cpp">
+      <Filter>Source Files\General Object Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\General Object Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject.cpp">
+      <Filter>Source Files\General Object Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelDesignDecal.cpp">
+      <Filter>Source Files\General Object Classes\Level Design</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelDesignObject.cpp">
+      <Filter>Source Files\General Object Classes\Level Design</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelDesignTile.cpp">
+      <Filter>Source Files\General Object Classes\Level Design</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelDesignStartingPosition.cpp">
+      <Filter>Source Files\General Object Classes\Level Design</Filter>
+    </ClCompile>
+    <ClCompile Include="RacetrackLevelDesignScreenData.cpp">
+      <Filter>Source Files\Data\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="AICar.cpp">
+      <Filter>Source Files\Racing Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameplayScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerData.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="RacetrackScreenData.cpp">
+      <Filter>Source Files\Data\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="RacetrackScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Bar.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="ClickableImage.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="RacetrackDescriptionUI.cpp">
+      <Filter>Source Files\UI\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="AddTextBoxScript.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="RacetrackScreenFactory.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelDesignScreen.cpp">
+      <Filter>Source Files\Screens\Level Design</Filter>
+    </ClCompile>
+    <ClCompile Include="RacetrackLevelDesignScreen.cpp">
+      <Filter>Source Files\Screens\Level Design</Filter>
+    </ClCompile>
+    <ClCompile Include="Lesson1RacetrackScreen.cpp">
+      <Filter>Source Files\Screens\Lessons</Filter>
+    </ClCompile>
+    <ClCompile Include="Lesson2RacetrackScreen.cpp">
+      <Filter>Source Files\Screens\Lessons</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitionOnEnterScript.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Lesson3RacetrackScreen.cpp">
+      <Filter>Source Files\Screens\Lessons</Filter>
+    </ClCompile>
+    <ClCompile Include="ChooseDrivingLessonScreen.cpp">
+      <Filter>Source Files\Screens\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScreen.cpp">
+      <Filter>Source Files\Screens\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="GarageScreen.cpp">
+      <Filter>Source Files\Screens\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="CarDescriptionUI.cpp">
+      <Filter>Source Files\UI\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="directx.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="road_asphalt1.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="cursor_blue.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="EmptyBackground.png">
+      <Filter>Resource Files\Sprites\Backgrounds</Filter>
+    </Image>
+    <Image Include="road_asphalt2.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt3.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt4.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt5.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt6.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt7.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt8.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt9.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt10.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt11.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt12.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt13.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt14.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt15.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt16.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt17.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt18.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt19.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt20.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt21.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt22.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt23.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt24.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt25.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt26.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt27.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt28.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt29.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt30.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt31.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt32.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt33.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt34.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt35.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt36.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt37.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt38.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt39.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt40.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt41.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt42.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt43.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt44.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt45.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt46.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt47.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt48.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt49.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt50.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt51.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt52.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt53.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt54.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt55.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt56.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt57.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt58.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt59.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt60.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt61.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt62.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt63.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt64.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt65.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt66.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt67.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt68.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt69.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt70.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt71.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt72.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt73.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt74.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt75.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt76.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt77.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt78.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt79.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt80.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt81.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt82.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt83.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt84.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt85.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt86.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt87.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt88.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt89.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="road_asphalt90.png">
+      <Filter>Resource Files\Sprites\Tiles\AsphaltRoad</Filter>
+    </Image>
+    <Image Include="Button.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="car_blue_small_1.png">
+      <Filter>Resource Files\Sprites\Cars\Blue</Filter>
+    </Image>
+    <Image Include="arrow_white.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="arrow_yellow.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrel_blue.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrel_blue_down.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrel_red.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrel_red_down.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrier_red.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrier_red_race.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrier_white.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="barrier_white_race.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="cone_down.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="cone_straight.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="light_white.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="light_yellow.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="lights.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="oil.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="rock1.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="rock2.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="rock3.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="skidmark_long_1.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="skidmark_long_2.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="skidmark_long_3.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="skidmark_short_1.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="skidmark_short_2.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="skidmark_short_3.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tent_blue.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tent_blue_large.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tent_red.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tent_red_large.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tires_red.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tires_red_alt.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tires_white.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tires_white_alt.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tree_large.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tree_small.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tribune_empty.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tribune_full.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tribune_overhang_red.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="tribune_overhang_striped.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="land_grass11.png">
+      <Filter>Resource Files\Sprites\Tiles\Objects</Filter>
+    </Image>
+    <Image Include="GreenBackground.png">
+      <Filter>Resource Files\Sprites\Backgrounds</Filter>
+    </Image>
+    <Image Include="GridLine.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="Marker.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="Level1.png">
+      <Filter>Resource Files\Sprites\Backgrounds</Filter>
+    </Image>
+    <Image Include="DialogBox.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="Lesson1Thumbnail.png">
+      <Filter>Resource Files\Sprites\Racetrack Thumbnails</Filter>
+    </Image>
+    <Image Include="AntiClockwiseLeftTurn.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="ClockwiseRightTurn.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="AntiClockwiseRightTurn.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+    <Image Include="ClockwiseLeftTurn.png">
+      <Filter>Resource Files\Sprites\UI</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="settings.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="LevelDesignScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+    <Xml Include="RaceScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+    <Xml Include="MainMenuScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+    <Xml Include="Corvette.xml">
+      <Filter>Resource Files\Data\Cars</Filter>
+    </Xml>
+    <Xml Include="DrivingLessonScreen.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="ChooseDrivingLessonScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+    <Xml Include="Lesson2RacetrackScreen.xml">
+      <Filter>Resource Files\Data\Tracks\Lessons</Filter>
+    </Xml>
+    <Xml Include="Lesson1RacetrackScreen.xml">
+      <Filter>Resource Files\Data\Tracks\Lessons</Filter>
+    </Xml>
+    <Xml Include="GarageScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Font.spritefont">
+      <Filter>Resource Files\Fonts</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <DisplayName/>
+    <BackgroundTextureAsset>GreenBackground.png</BackgroundTextureAsset>
+    <NormalTiles>
+        <Item x="1280" y="1920" rotation="0" collider="0">road_asphalt70.png</Item>
+        <Item x="1152" y="1920" rotation="0" collider="0">road_asphalt69.png</Item>
+        <Item x="1408" y="1920" rotation="0" collider="0">road_asphalt71.png</Item>
+        <Item x="1152" y="2048" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="2176" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1408" y="2048" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="2176" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1152" y="2304" rotation="0" collider="0">road_asphalt24.png</Item>
+        <Item x="1408" y="2304" rotation="0" collider="0">road_asphalt25.png</Item>
+        <Item x="1280" y="2304" rotation="0" collider="0">road_asphalt40.png</Item>
+        <Item x="1280" y="2176" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1152" y="1792" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="1664" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="1536" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="1408" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="1280" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="1152" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="1024" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="896" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1408" y="1792" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1664" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1536" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1408" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1280" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1152" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="1024" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="896" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1280" y="768" rotation="0" collider="0">road_asphalt70.png</Item>
+        <Item x="1408" y="768" rotation="0" collider="0">road_asphalt71.png</Item>
+        <Item x="1152" y="768" rotation="0" collider="0">road_asphalt69.png</Item>
+        <Item x="1280" y="1024" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1280" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1664" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1152" y="640" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1152" y="512" rotation="0" collider="0">road_asphalt21.png</Item>
+        <Item x="1408" y="640" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1408" y="512" rotation="0" collider="0">road_asphalt23.png</Item>
+        <Item x="1152" y="384" rotation="0" collider="0">road_asphalt6.png</Item>
+        <Item x="1408" y="384" rotation="0" collider="0">road_asphalt7.png</Item>
+        <Item x="1280" y="384" rotation="0" collider="0">road_asphalt4.png</Item>
+        <Item x="1280" y="512" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="640" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="896" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1152" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1408" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1536" rotation="0" collider="0">road_asphalt22.png</Item>
+        <Item x="1280" y="1792" rotation="0" collider="0">road_asphalt22.png</Item>
+    </NormalTiles>
+    <CollisionTiles/>
+    <NormalDecals/>
+    <CollisionDecals>
+        <Item x="1276.6663" y="1660.6632" rotation="0" collider="1">cone_straight.png</Item>
+        <Item x="1275.6663" y="1365.3306" rotation="0" collider="1">cone_straight.png</Item>
+        <Item x="1276.6663" y="1065.3315" rotation="0" collider="1">cone_straight.png</Item>
+        <Item x="1277.6663" y="752.33264" rotation="0" collider="1">cone_straight.png</Item>
+    </CollisionDecals>
+    <StartingPoints>
+        <Item x="1280" y="2048" rotation="0" collider="0">road_asphalt83.png</Item>
+    </StartingPoints>
+    <TrackPoints>
+        <TrackPoint x="1386.6663" y="1657.9962"/>
+        <TrackPoint x="1167.6663" y="1367.3302"/>
+        <TrackPoint x="1384.3324" y="1066.6643"/>
+        <TrackPoint x="1169.3324" y="753.99902"/>
+    </TrackPoints>
+    <TrackName>Lesson 2</TrackName>
+    <ThumbnailAsset>Lesson2Thumbnail.png</ThumbnailAsset>
+    <Description>
+      Now for some more complex driving!
+    Handling is the name of the game here.
+    </Description>
+</Root>
