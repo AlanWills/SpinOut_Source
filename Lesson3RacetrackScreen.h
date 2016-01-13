@@ -16,3 +16,16 @@ private:
   std::vector<Image*> m_arrows;
   size_t m_currentArrow;
 };
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+class CheckCollisionsScript : public Script
+{
+  IMPLEMENT_SIMPLE_SCRIPT_RUN;
+
+  CheckCollisionsScript(PlayerCar* playerCar, bool shouldUpdateGame = true, bool canRun = true);
+  ~CheckCollisionsScript();
+
+private:
+  PlayerCar* m_playerCar;
+};
