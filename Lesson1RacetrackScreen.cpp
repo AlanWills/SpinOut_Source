@@ -10,8 +10,9 @@
 #include "TransitionOnEnterScript.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-Lesson1RacetrackScreen::Lesson1RacetrackScreen(ScreenManager* screenManager, const std::string& dataAsset) :
-  RacetrackScreen(screenManager, dataAsset)
+Lesson1RacetrackScreen::Lesson1RacetrackScreen(ScreenManager* screenManager, const std::string& dataAsset, unsigned int checkPoint) :
+  RacetrackScreen(screenManager, dataAsset),
+  m_checkPoint((Lesson1CheckPoints)checkPoint)
 {
 }
 
@@ -28,9 +29,13 @@ void Lesson1RacetrackScreen::AddInitialScripts()
   PlayerCar* playerCar = GetPlayerCar();
   assert(playerCar);
 
-  AddScript(new AddTextBoxScript(L"Welcome to Lesson 1!"));
-  AddScript(new AddTextBoxScript(L"Here you will learn the basics\nof handling and driving your car."));
-  AddScript(new AddTextBoxScript(L"Lets get started!"));
+  if (m_checkPoint == Lesson1CheckPoints::kLevelStart)
+  {
+    AddScript(new AddTextBoxScript(L"Welcome to Lesson 1!"));
+    AddScript(new AddTextBoxScript(L"Here you will learn the basics\nof handling and driving your car."));
+    AddScript(new AddTextBoxScript(L"Lets get started!"));
+  }
+
   AddScript(new AddTextBoxScript(L"Hold the 'W' key to accelerate."));
   AddScript(new CheckAccelerateScript(playerCar), GetLastAddedScript());
   AddScript(new AddTextBoxScript(L"Good!  Now try deccelerating\nby holding the 'S' key."));

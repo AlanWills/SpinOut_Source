@@ -1,8 +1,8 @@
 #pragma once
 
-#include "BaseScreen.h"
+#include "MenuScreen.h"
 
-class MainMenuScreen : public BaseScreen
+class MainMenuScreen : public MenuScreen
 {
 public:
 	MainMenuScreen(ScreenManager* screenManager, const std::string& dataAsset = "MainMenuScreen.xml");

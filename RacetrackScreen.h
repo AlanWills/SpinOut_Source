@@ -18,6 +18,19 @@ public: \
 \
 friend class RacetrackScreenFactory;
 
+#define REGISTER_RACETRACK_CHECKPOINTS(name, defaultAsset, checkPoints) \
+protected: \
+  name(ScreenManager* screenManager, const std::string& dataAsset = defaultAsset, unsigned int checkPoint = 0); \
+public: \
+  virtual ~name(); \
+  name(name const&) = delete; \
+  void operator=(name const&) = delete; \
+\
+private: \
+checkPoints m_checkPoint;\
+\
+friend class RacetrackScreenFactory;
+
 
 class RacetrackScreen : public GameplayScreen
 {

@@ -5,6 +5,7 @@
 #include "ScreenManager.h"
 #include "RacetrackScreenFactory.h"
 
+#include "MainMenuScreen.h"
 #include "ChooseDrivingLessonScreen.h"
 #include "RacetrackScreen.h"
 
@@ -12,11 +13,14 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 ChooseDrivingLessonScreen::ChooseDrivingLessonScreen(ScreenManager* screenManager, const std::string& dataAsset) :
-  BaseScreen(screenManager, dataAsset),
+  MenuScreen(screenManager, dataAsset),
   m_currentLesson(PlayerData::GetInstance().GetCurrentLicenseLevel())
 {
+  SetPreviousScreen(new MainMenuScreen(GetScreenManager()));
+
   m_lessons.push_back(Lesson("Lesson1RacetrackScreen.xml", new RacetrackDescriptionUI(GetDevice(), "Lesson1RacetrackScreen.xml")));
   m_lessons.push_back(Lesson("Lesson2RacetrackScreen.xml", new RacetrackDescriptionUI(GetDevice(), "Lesson2RacetrackScreen.xml")));
+  m_lessons.push_back(Lesson("Lesson3RacetrackScreen.xml", new RacetrackDescriptionUI(GetDevice(), "Lesson3RacetrackScreen.xml")));
 }
 
 
@@ -29,7 +33,7 @@ ChooseDrivingLessonScreen::~ChooseDrivingLessonScreen()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void ChooseDrivingLessonScreen::AddInitialUI()
 {
-  BaseScreen::AddInitialUI();
+  MenuScreen::AddInitialUI();
 
   for (const Lesson& lesson : m_lessons)
   {
@@ -50,7 +54,7 @@ void ChooseDrivingLessonScreen::AddInitialUI()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void ChooseDrivingLessonScreen::Initialize()
 {
-  BaseScreen::Initialize();
+  MenuScreen::Initialize();
 
   ShowCurrentLessonUI();
 }
@@ -59,7 +63,7 @@ void ChooseDrivingLessonScreen::Initialize()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void ChooseDrivingLessonScreen::HandleInput(float elapsedGameTime)
 {
-  BaseScreen::HandleInput(elapsedGameTime);
+  MenuScreen::HandleInput(elapsedGameTime);
 
   if (AcceptsInput())
   {
@@ -67,18 +71,24 @@ void ChooseDrivingLessonScreen::HandleInput(float elapsedGameTime)
 
     if (keyboard.IsKeyPressed(Keyboard::Keys::Left))
     {
-      m_currentLesson = MathUtils::Clamp<size_t>(m_currentLesson - 1, 0, PlayerData::GetInstance().GetCurrentLicenseLevel());
+      if (m_currentLesson != 0)
+      {
+        m_currentLesson--;
 
-      // Hide the other level UIs
-      ShowCurrentLessonUI();
+        // Hide the other level UIs
+        ShowCurrentLessonUI();
+      }
     }
     
     if (keyboard.IsKeyPressed(Keyboard::Keys::Right))
     {
-      m_currentLesson = MathUtils::Clamp<size_t>(m_currentLesson + 1, 0, PlayerData::GetInstance().GetCurrentLicenseLevel());
+      if (m_currentLesson < min(PlayerData::GetInstance().GetCurrentLicenseLevel(), m_lessons.size() - 1))
+      {
+        m_currentLesson++;
 
-      // Hide the other level UIs
-      ShowCurrentLessonUI();
+        // Hide the other level UIs
+        ShowCurrentLessonUI();
+      }
     }
   }
 }

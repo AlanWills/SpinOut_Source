@@ -390,6 +390,9 @@
     <ClInclude Include="CarDescriptionUI.h">
       <Filter>Header Files\UI\Game</Filter>
     </ClInclude>
+    <ClInclude Include="MenuScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -577,6 +580,9 @@
     </ClCompile>
     <ClCompile Include="CarDescriptionUI.cpp">
       <Filter>Source Files\UI\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1020,6 +1026,12 @@
     <Image Include="ClockwiseLeftTurn.png">
       <Filter>Resource Files\Sprites\UI</Filter>
     </Image>
+    <Image Include="Lesson2Thumbnail.png">
+      <Filter>Resource Files\Sprites\Racetrack Thumbnails</Filter>
+    </Image>
+    <Image Include="Lesson3Thumbnail.png">
+      <Filter>Resource Files\Sprites\Racetrack Thumbnails</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="settings.manifest">
@@ -1053,6 +1065,9 @@
     </Xml>
     <Xml Include="GarageScreen.xml">
       <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+    <Xml Include="Lesson3RacetrackScreen.xml">
+      <Filter>Resource Files\Data\Tracks\Lessons</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

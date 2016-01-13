@@ -11,7 +11,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 MainMenuScreen::MainMenuScreen(ScreenManager* screenManager, const std::string& dataAsset) :
-	BaseScreen(screenManager, dataAsset)
+  MenuScreen(screenManager, dataAsset)
 {
 }
 
@@ -25,7 +25,7 @@ MainMenuScreen::~MainMenuScreen()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void MainMenuScreen::AddInitialUI()
 {
-	BaseScreen::AddInitialUI();
+  MenuScreen::AddInitialUI();
 
 	Button* playButton = new Button(GetScreenCentre(), L"Go Race!");
 	playButton->SetClickFunction([this]()
@@ -49,7 +49,7 @@ void MainMenuScreen::AddInitialUI()
   garageButton->SetClickFunction([this]()
   {
     // Transition to garage screen
-    Transition(new GarageScreen(GetScreenManager(), "GarageScreen.xml"));
+    Transition(new GarageScreen(GetScreenManager()));
   });
 
   AddScreenUIObject(garageButton);

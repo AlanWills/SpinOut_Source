@@ -5,7 +5,14 @@
 
 class Lesson1RacetrackScreen : public RacetrackScreen
 {
-  REGISTER_RACETRACK(Lesson1RacetrackScreen, "Lesson1RacetrackScreen.xml")
+public:
+  enum Lesson1CheckPoints
+  {
+    kLevelStart,
+    kLevelEnd,
+  };
+
+  REGISTER_RACETRACK_CHECKPOINTS(Lesson1RacetrackScreen, "Lesson1RacetrackScreen.xml", Lesson1CheckPoints);
 
 public:
   void AddInitialScripts() override;

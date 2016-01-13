@@ -1,11 +1,11 @@
 #pragma once
 
-#include "BaseScreen.h"
+#include "MenuScreen.h"
 
 #include "RacetrackScreenData.h"
 #include "RacetrackDescriptionUI.h"
 
-class ChooseDrivingLessonScreen : public BaseScreen
+class ChooseDrivingLessonScreen : public MenuScreen
 {
 public:
   ChooseDrivingLessonScreen(ScreenManager* screenManager, const std::string& dataAsset = "ChooseDrivingLessonScreen.xml");

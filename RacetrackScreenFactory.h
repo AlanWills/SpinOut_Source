@@ -8,5 +8,5 @@ public:
   RacetrackScreenFactory();
   ~RacetrackScreenFactory();
 
-  static RacetrackScreen* CreateRacetrack(ScreenManager* screenManager, const std::string& name);
+  static RacetrackScreen* CreateRacetrack(ScreenManager* screenManager, const std::string&, unsigned int checkPoint = 0);
 };

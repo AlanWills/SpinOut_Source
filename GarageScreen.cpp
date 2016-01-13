@@ -3,6 +3,7 @@
 #include "PlayerData.h"
 
 #include "ScreenManager.h"
+#include "MainMenuScreen.h"
 #include "GarageScreen.h"
 
 #include "Button.h"
@@ -10,9 +11,11 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 GarageScreen::GarageScreen(ScreenManager* screenManager, const std::string& dataAsset) :
-  BaseScreen(screenManager, dataAsset),
+  MenuScreen(screenManager, dataAsset),
   m_currentCar(0)
 {
+  SetPreviousScreen(new MainMenuScreen(GetScreenManager()));
+
   m_carInfos.push_back(CarInfo("Corvette.xml", new CarDescriptionUI(GetDevice(), "Corvette.xml")));
 }
 
@@ -26,7 +29,7 @@ GarageScreen::~GarageScreen()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void GarageScreen::AddInitialUI()
 {
-  BaseScreen::AddInitialUI();
+  MenuScreen::AddInitialUI();
 
   for (const CarInfo& info : m_carInfos)
   {
@@ -47,7 +50,7 @@ void GarageScreen::AddInitialUI()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void GarageScreen::Initialize()
 {
-  BaseScreen::Initialize();
+  MenuScreen::Initialize();
 
   ShowCurrentCarUI();
 }
@@ -56,7 +59,7 @@ void GarageScreen::Initialize()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void GarageScreen::HandleInput(float elapsedGameTime)
 {
-  BaseScreen::HandleInput(elapsedGameTime);
+  MenuScreen::HandleInput(elapsedGameTime);
 
   if (AcceptsInput())
   {

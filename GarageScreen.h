@@ -1,14 +1,14 @@
 #pragma once
 
-#include "BaseScreen.h"
+#include "MenuScreen.h"
 
 #include "CarData.h"
 #include "CarDescriptionUI.h"
 
-class GarageScreen : public BaseScreen
+class GarageScreen : public MenuScreen
 {
 public:
-  GarageScreen(ScreenManager* screenManager, const std::string& dataAsset);
+  GarageScreen(ScreenManager* screenManager, const std::string& dataAsset = "GarageScreen.xml");
   ~GarageScreen();
 
   void AddInitialUI() override;

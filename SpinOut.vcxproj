@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <RootNamespace>SpinOut</RootNamespace>
-    <ProjectGuid>{1C4D32B5-4427-48CF-B13D-ABB7611EB929}</ProjectGuid>
+    <ProjectGuid>{BF31F6B4-EF3B-4596-AB04-4B1DC86425F6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -87,7 +87,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>C:\Users\alawi\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SpinOut\DirectXTK-master\Inc;C:\Users\alawi\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -106,7 +106,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
-      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -128,7 +128,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,7 +151,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <FloatingPointModel>Fast</FloatingPointModel>
-      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\SpinOut\DirectXTK-master\Inc;C:\Users\Alan\Documents\Visual Studio 2015\Projects\SpinOut\DirectXTK-master\Inc;%(AdditionalIncludeDirectories);C:\Users\Alan\OneDrive\SpinOut\DirectXTK-master\Inc;$(SolutionDir)\DirectXTK\Inc;$(SolutionDir)\DirectXTK\Inc\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -204,6 +204,7 @@
     <ClInclude Include="MainMenuScreen.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="MenuScreen.h" />
     <ClInclude Include="MouseButton.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PlayerCar.h" />
@@ -270,6 +271,7 @@
     <ClCompile Include="MainMenuScreen.cpp" />
     <ClCompile Include="MathUtils.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuScreen.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -332,6 +334,8 @@
     <Image Include="GridLine.png" />
     <Image Include="land_grass11.png" />
     <Image Include="AntiClockwiseLeftTurn.png" />
+    <Image Include="Lesson2Thumbnail.png" />
+    <Image Include="Lesson3Thumbnail.png" />
     <Image Include="Level1.png" />
     <Image Include="Lesson1Thumbnail.png" />
     <Image Include="lights.png" />
@@ -464,6 +468,7 @@
     <Xml Include="GarageScreen.xml" />
     <Xml Include="Lesson1RacetrackScreen.xml" />
     <Xml Include="Lesson2RacetrackScreen.xml" />
+    <Xml Include="Lesson3RacetrackScreen.xml" />
     <Xml Include="LevelDesignScreen.xml" />
     <Xml Include="MainMenuScreen.xml" />
     <Xml Include="RaceScreen.xml" />

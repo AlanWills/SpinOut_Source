@@ -8,9 +8,10 @@
 #include "TransitionOnEnterScript.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-Lesson2RacetrackScreen::Lesson2RacetrackScreen(ScreenManager* screenManager, const std::string& dataAsset) : 
+Lesson2RacetrackScreen::Lesson2RacetrackScreen(ScreenManager* screenManager, const std::string& dataAsset, unsigned int checkPoint) : 
   RacetrackScreen(screenManager, dataAsset),
-  m_currentArrow(0)
+  m_currentArrow(0),
+  m_checkPoint((Lesson2CheckPoints)checkPoint)
 {
 }
 
@@ -27,16 +28,20 @@ void Lesson2RacetrackScreen::AddInitialScripts()
   PlayerCar* playerCar = GetPlayerCar();
   assert(playerCar);
 
-  AddScript(new AddTextBoxScript(L"Welcome to Lesson 2."));
-  AddScript(new AddTextBoxScript(L"Here you will practice some more realistic driving."));
-  AddScript(new AddTextBoxScript(L"Follow the arrows and slalom round the cones.\nIf you hit a cone, you will have to start again"));
+  if (m_checkPoint == Lesson2CheckPoints::kLevelStart)
+  {
+    AddScript(new AddTextBoxScript(L"Welcome to Lesson 2."));
+    AddScript(new AddTextBoxScript(L"Here you will practice some more realistic driving."));
+    AddScript(new AddTextBoxScript(L"Follow the arrows and slalom round the cones.\nIf you hit a cone, you will have to start again"));
+  }
+
   AddScript(new UpdateArrowsScript(this));
   AddScript(new AddTextBoxScript(L"Well done!\nHit 'Enter' to move to the next lesson."));
-  //AddScript(new TransitionOnEnterScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson3RacetrackScreen.xml")));
+  AddScript(new TransitionOnEnterScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson3RacetrackScreen.xml")));
 
   CheckCollisionsScript* collisionScript = new CheckCollisionsScript(playerCar);
   AddScript(collisionScript, nullptr);
-  AddScript(new LessonFailedScript(GetScreenManager(), L"Try to avoid the cones!\nPress enter to restart."), collisionScript);
+  AddScript(new LessonFailedScript(GetScreenManager(), L"Try to avoid the cones!\nPress 'Enter' to restart."), collisionScript);
 }
 
 
@@ -57,7 +62,7 @@ void Lesson2RacetrackScreen::LoadLevel()
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-CheckCollisionsScript::CheckCollisionsScript(PlayerCar* playerCar, bool shouldUpdateGame, bool canRun) :
+Lesson2RacetrackScreen::CheckCollisionsScript::CheckCollisionsScript(PlayerCar* playerCar, bool shouldUpdateGame, bool canRun) :
   Script(shouldUpdateGame, canRun),
   m_playerCar(playerCar)
 {
@@ -65,13 +70,13 @@ CheckCollisionsScript::CheckCollisionsScript(PlayerCar* playerCar, bool shouldUp
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-CheckCollisionsScript::~CheckCollisionsScript()
+Lesson2RacetrackScreen::CheckCollisionsScript::~CheckCollisionsScript()
 {
 }
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void CheckCollisionsScript::Run(float elapsedGameTime)
+void Lesson2RacetrackScreen::CheckCollisionsScript::Run(float elapsedGameTime)
 {
   Script::Run(elapsedGameTime);
 
@@ -83,7 +88,7 @@ void CheckCollisionsScript::Run(float elapsedGameTime)
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-LessonFailedScript::LessonFailedScript(ScreenManager* screenManager, const std::wstring& lessonFailedText, bool shouldUpdateGame, bool canRun) :
+Lesson2RacetrackScreen::LessonFailedScript::LessonFailedScript(ScreenManager* screenManager, const std::wstring& lessonFailedText, bool shouldUpdateGame, bool canRun) :
   AddTextBoxScript(lessonFailedText),
   m_screenManager(screenManager)
 {
@@ -91,13 +96,13 @@ LessonFailedScript::LessonFailedScript(ScreenManager* screenManager, const std::
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-LessonFailedScript::~LessonFailedScript()
+Lesson2RacetrackScreen::LessonFailedScript::~LessonFailedScript()
 {
 }
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void LessonFailedScript::HandleInput(float elapsedGameTime)
+void Lesson2RacetrackScreen::LessonFailedScript::HandleInput(float elapsedGameTime)
 {
   // Don't want to handle input for text box, because we don't want to quit if mouse clicked
 
@@ -106,14 +111,14 @@ void LessonFailedScript::HandleInput(float elapsedGameTime)
     if (ScreenManager::GetKeyboardInput().IsKeyPressed(Keyboard::Keys::Enter))
     {
       SetCompleted(true);
-      m_screenManager->Transition(m_screenManager->GetCurrentScreen(), RacetrackScreenFactory::CreateRacetrack(m_screenManager, "Lesson2RacetrackScreen.xml"));
+      m_screenManager->Transition(m_screenManager->GetCurrentScreen(), RacetrackScreenFactory::CreateRacetrack(m_screenManager, "Lesson2RacetrackScreen.xml", Lesson2CheckPoints::kGameplayStart));
     }
   }
 }
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-UpdateArrowsScript::UpdateArrowsScript(Lesson2RacetrackScreen* lessonScreen, bool shouldUpdateGame, bool canRun) :
+Lesson2RacetrackScreen::UpdateArrowsScript::UpdateArrowsScript(Lesson2RacetrackScreen* lessonScreen, bool shouldUpdateGame, bool canRun) :
   Script(shouldUpdateGame, canRun),
   m_lessonScreen(lessonScreen)
 {
@@ -121,20 +126,20 @@ UpdateArrowsScript::UpdateArrowsScript(Lesson2RacetrackScreen* lessonScreen, boo
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-UpdateArrowsScript::~UpdateArrowsScript()
+Lesson2RacetrackScreen::UpdateArrowsScript::~UpdateArrowsScript()
 {
 }
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void UpdateArrowsScript::LoadAndInit(ID3D11Device* device)
+void Lesson2RacetrackScreen::UpdateArrowsScript::LoadAndInit(ID3D11Device* device)
 {
   UpdateArrowsVisibility();
 }
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void UpdateArrowsScript::Run(float elapsedGameTime)
+void Lesson2RacetrackScreen::UpdateArrowsScript::Run(float elapsedGameTime)
 {
   Script::Run(elapsedGameTime);
 
@@ -158,7 +163,7 @@ void UpdateArrowsScript::Run(float elapsedGameTime)
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void UpdateArrowsScript::UpdateArrowsVisibility()
+void Lesson2RacetrackScreen::UpdateArrowsScript::UpdateArrowsVisibility()
 {
   for (size_t index = 0; index < m_lessonScreen->m_arrows.size(); index++)
   {

@@ -7,7 +7,14 @@
 
 class Lesson2RacetrackScreen :  public RacetrackScreen 
 {
-  REGISTER_RACETRACK(Lesson2RacetrackScreen, "Lesson2RacetrackScreen.xml")
+  enum Lesson2CheckPoints
+  {
+    kLevelStart,
+    kGameplayStart,
+    kLevelEnd,
+  };
+
+  REGISTER_RACETRACK_CHECKPOINTS(Lesson2RacetrackScreen, "Lesson2RacetrackScreen.xml", Lesson2CheckPoints);
 
 public:
   void AddInitialScripts() override;
@@ -16,9 +23,6 @@ public:
 private:
   std::vector<Image*> m_arrows;
   size_t m_currentArrow;
-
-  friend class UpdateArrowsScript;
-};
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -59,4 +63,6 @@ private:
   void UpdateArrowsVisibility();
 
   Lesson2RacetrackScreen* m_lessonScreen;
+};
+
 };

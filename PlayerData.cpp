@@ -6,7 +6,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 PlayerData::PlayerData() :
   BaseData("PlayerData.xml"),
-  m_currentLicenseLevel(1)
+  m_currentLicenseLevel(2)
 {
   m_carAssets.push_back("Corvette.xml");
 }
