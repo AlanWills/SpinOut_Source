@@ -41,7 +41,7 @@ void GarageScreen::AddInitialUI()
   Button* chooseCarButton = new Button(Vector2(GetScreenCentre().x, GetScreenDimensions().y - 100), L"Drive Car");
   chooseCarButton->SetClickFunction([this]()
   {
-    //Transition(RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), m_lessons[m_currentLesson].first));
+    PlayerData::GetInstance().SetCurrentCarAsset(m_carInfos[m_currentCar].first);
   });
   AddScreenUIObject(chooseCarButton);
 }
@@ -89,7 +89,7 @@ void GarageScreen::ShowCurrentCarUI()
 {
   for (size_t i = 0; i < m_carInfos.size(); i++)
   {
-    // Set it's visibility based on whether it is the current selected lesson
+    // Set it's visibility based on whether it is the current selected car
     m_carInfos[i].second->SetVisible(i == m_currentCar);
   }
 }

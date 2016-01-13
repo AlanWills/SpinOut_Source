@@ -4,6 +4,8 @@
 #include "ScreenManager.h"
 #include "Camera.h"
 
+#include "PlayerData.h"
+
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 RacetrackScreen::RacetrackScreen(ScreenManager* screenManager, const std::string& dataAsset) :
@@ -27,7 +29,7 @@ void RacetrackScreen::LoadContent()
 
   LoadLevel();
 
-  PlayerCar* playerCar = new PlayerCar(m_startingPositions.front(), "Corvette.xml");
+  PlayerCar* playerCar = new PlayerCar(m_startingPositions.front(), PlayerData::GetInstance().GetCurrentCarAsset());
   AddPlayerCar(playerCar);
 
   //AddAICar(new AICar(m_startingPositions.front(), "Corvette.xml", m_trackPoints));

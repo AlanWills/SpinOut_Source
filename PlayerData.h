@@ -14,6 +14,10 @@ public:
   PlayerData(PlayerData const&) = delete;
   void operator=(PlayerData const&) = delete;
 
+  // Gets and sets the current car used by the player in races
+  const std::string& GetCurrentCarAsset() const { return m_currentCarAsset; }
+  void SetCurrentCarAsset(const std::string& currentCarAsset) { m_currentCarAsset = currentCarAsset; }
+
   const std::list<std::string>& GetCarAssets() const { return m_carAssets; }
   void AddCarAsset(const std::string& carAsset) { m_carAssets.push_back(carAsset); }
 
@@ -25,7 +29,9 @@ public:
 private:
   PlayerData();
 
+  std::string m_currentCarAsset;
   std::list<std::string> m_carAssets;
+
   size_t m_currentLicenseLevel;
 };
 
