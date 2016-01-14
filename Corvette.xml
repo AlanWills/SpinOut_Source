@@ -2,7 +2,10 @@
 <Root>
   <DisplayName>Corvette</DisplayName>
   <TextureAsset>car_blue_small_1.png</TextureAsset>
-  <Description>Fill in</Description>
+  <Description>
+A beautiful car perfect for a new driver.
+It does suffer from handling issues at top speed.
+  </Description>
   <TopSpeed>400</TopSpeed>
   <Acceleration>300</Acceleration>
   <Braking>250</Braking>
