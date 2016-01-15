@@ -115,7 +115,7 @@ protected:
 
 	const bool IsVisible() { return m_visible; }
 	const bool AcceptsInput() { return m_acceptsInput; }
-  const bool ShouldUpdateGame() { IsActive() && m_scriptManager->ShouldUpdateGame(); }
+  const bool ShouldUpdateGame() { return IsActive() && m_scriptManager->ShouldUpdateGame(); }
 
 private:
   // This should not be used to check whether we should update, but rather is used in the ShouldUpdateGame function which sould be used instead

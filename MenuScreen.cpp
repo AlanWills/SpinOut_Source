@@ -25,7 +25,7 @@ void MenuScreen::HandleInput(float elapsedSeconds)
 {
   BaseScreen::HandleInput(elapsedSeconds);
 
-  if (IsActive())
+  if (ShouldUpdateGame())
   {
     if (m_previousScreen, ScreenManager::GetKeyboardInput().IsKeyPressed(Keyboard::Keys::Escape))
     {

@@ -66,7 +66,7 @@ void Lesson4RacetrackScreen::Update(float elapsedSeconds)
     m_timer -= elapsedSeconds;
     m_timerLabel->SetText(L"Time Left: " + std::to_wstring(m_timer));
 
-    if (m_timer == 0)
+    if (m_timer <= 0)
     {
       AddScript(new AddTextBoxScript(L"You ran out of time!", 2));
       AddScript(new TransitionOnKeyPressScript(
@@ -104,7 +104,7 @@ void Lesson4RacetrackScreen::StartTestScript::Run(float elapsedSeconds)
 
   if (IsRunning())
   {
-    m_lessonScreen->AddScreenUIObject(m_goLabel);
+    m_lessonScreen->AddScreenUIObject(m_goLabel, true, true);
     SetCompleted(true);
   }
 }

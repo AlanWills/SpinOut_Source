@@ -160,7 +160,7 @@ void LevelDesignScreen::Update(float elapsedSeconds)
 {
   BaseScreen::Update(elapsedSeconds);
 
-  if (IsActive())
+  if (ShouldUpdateGame())
   {
     // If we have selected a current tile and we are placing a tile rather than a decal then we should snap the mouse to the centre of tiles
     if (m_currentTile)
