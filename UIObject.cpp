@@ -56,6 +56,12 @@ void UIObject::Update(float elapsedSeconds)
 //-----------------------------------------------------------------------------------------------------------------------------------
 void UIObject::CheckVisible()
 {
+  if (GetType() == kScreen)
+  {
+    // If we have a screen UIObject we do not care about using it's collider to update visibility
+    return;
+  }
+
   if (GetShouldHaveCollider())
   {
     Vector2 worldPos;

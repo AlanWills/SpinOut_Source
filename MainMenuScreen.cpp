@@ -1,5 +1,7 @@
 #include "pch.h"
 
+#include "PlayerData.h"
+
 #include "MainMenuScreen.h"
 #include "ChooseDrivingLessonScreen.h"
 #include "GarageScreen.h"
@@ -52,6 +54,7 @@ void MainMenuScreen::AddInitialUI()
     Transition(new GarageScreen(GetScreenManager()));
   });
 
+  garageButton->SetName("Garage Button");
   AddScreenUIObject(garageButton);
 
   Button* exitButton = new Button(Vector2(0, 100), L"Quit", "Button.png", BaseObject::kTexture, garageButton);
@@ -61,4 +64,20 @@ void MainMenuScreen::AddInitialUI()
   });
 
   AddScreenUIObject(exitButton);
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+void MainMenuScreen::Initialize()
+{
+  MenuScreen::Initialize();
+
+  UIObject* garageButton = GetScreenUIObjects()->FindObject("Garage Button");
+  assert(garageButton);
+
+  // If we have not passed the first license test we should hide the garage button - it is unlocked when you pass your first test
+  if (!PlayerData::GetInstance().HasPassedTest(LICENSE_TEST_1))
+  {
+    garageButton->Hide();
+  }
 }

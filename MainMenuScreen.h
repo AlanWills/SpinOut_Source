@@ -9,4 +9,5 @@ public:
 	~MainMenuScreen();
 
 	void AddInitialUI() override;
+  void Initialize() override;
 };

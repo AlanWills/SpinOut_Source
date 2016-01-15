@@ -22,6 +22,9 @@ public: \
 void Run(float elapsedSeconds) override; \
 void HandleInput(float elapsedSeconds) override;
 
+#define IMPLEMENT_SIMPLE_SCRIPT_DRAW_SCREENOBJECTS \
+public: \
+void DrawScreenObjects(SpriteBatch* spriteBatch, SpriteFont* spriteFont) override;
 
 class Script
 {

@@ -2,11 +2,10 @@
 
 #include "PlayerData.h"
 
-
 //-----------------------------------------------------------------------------------------------------------------------------------
 PlayerData::PlayerData() :
   BaseData("PlayerData.xml"),
-  m_currentLicenseLevel(2)
+  m_currentLicenseLevel(3)
 {
   m_carAssets.push_back("Corvette.xml");
 

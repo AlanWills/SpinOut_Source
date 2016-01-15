@@ -18,9 +18,10 @@ ChooseDrivingLessonScreen::ChooseDrivingLessonScreen(ScreenManager* screenManage
 {
   SetPreviousScreen(new MainMenuScreen(GetScreenManager()));
 
-  m_lessons.push_back(Lesson("Lesson1RacetrackScreen.xml", new RacetrackDescriptionUI(GetDevice(), "Lesson1RacetrackScreen.xml")));
-  m_lessons.push_back(Lesson("Lesson2RacetrackScreen.xml", new RacetrackDescriptionUI(GetDevice(), "Lesson2RacetrackScreen.xml")));
-  m_lessons.push_back(Lesson("Lesson3RacetrackScreen.xml", new RacetrackDescriptionUI(GetDevice(), "Lesson3RacetrackScreen.xml")));
+  m_lessons.push_back(Lesson("Lesson1RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson1RacetrackScreen.xml")));
+  m_lessons.push_back(Lesson("Lesson2RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson2RacetrackScreen.xml")));
+  m_lessons.push_back(Lesson("Lesson3RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson3RacetrackScreen.xml")));
+  m_lessons.push_back(Lesson("Lesson4RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson4RacetrackScreen.xml")));
 }
 
 

@@ -12,10 +12,9 @@ public:
   AddTextBoxScript(TextBox* textBox, bool shouldUpdateGame = false, bool canRun = true);
   ~AddTextBoxScript();
 
-  void LoadAndInit(ID3D11Device* device) override;
-  void Run(float elapsedSeconds) override;
-  void DrawScreenObjects(SpriteBatch* spriteBatch, SpriteFont* spriteFont) override;
-  void HandleInput(float elapsedSeconds) override;
+  IMPLEMENT_SIMPLE_SCRIPT_LOAD;
+  IMPLEMENT_SIMPLE_SCRIPT_RUN_HANDLE_INPUT;
+  IMPLEMENT_SIMPLE_SCRIPT_DRAW_SCREENOBJECTS;
 
 private:
   std::unique_ptr<TextBox> m_textBox;

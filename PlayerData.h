@@ -4,6 +4,8 @@
 
 #include <list>
 
+#define LICENSE_TEST_1 4
+
 class PlayerData : public BaseData
 {
 public:
@@ -25,6 +27,8 @@ public:
 
   /// \brief Sets the current license level of the player to the max of either the input or their current level
   void SetCurrentLicenseLevel(int currentLicenseLevel);
+
+  bool HasPassedTest(size_t test) { return m_currentLicenseLevel >= test; }
 
 private:
   PlayerData();

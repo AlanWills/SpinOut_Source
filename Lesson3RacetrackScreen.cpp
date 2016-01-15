@@ -6,7 +6,7 @@
 #include "RacetrackScreenFactory.h"
 
 #include "AddTextBoxScript.h"
-#include "TransitionOnEnterScript.h"
+#include "TransitionOnKeyPressScript.h"
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -44,7 +44,7 @@ void Lesson3RacetrackScreen::AddInitialScripts()
   AddScript(new UpdateArrowsScript(this));
   AddScript(new AddTextBoxScript(L"Well done!\nThat was a tough lesson."));
   AddScript(new AddTextBoxScript(L"Press 'Enter' to finish."));
-  AddScript(new TransitionOnEnterScript(GetScreenManager(), new ChooseDrivingLessonScreen(GetScreenManager())));
+  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), new ChooseDrivingLessonScreen(GetScreenManager()), Keyboard::Keys::Enter));
 
   CheckCollisionsScript* collisionScript = new CheckCollisionsScript(playerCar);
   AddScript(collisionScript, nullptr);

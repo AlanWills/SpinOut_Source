@@ -3,7 +3,7 @@
   <DisplayName>Corvette</DisplayName>
   <TextureAsset>car_blue_small_1.png</TextureAsset>
   <Description>
-A beautiful car perfect for a new driver.
+    A beautiful car perfect for a new driver.
 It does suffer from handling issues at top speed.
   </Description>
   <TopSpeed>400</TopSpeed>

@@ -113,11 +113,14 @@ protected:
   void AddCollisionObject(GameObject* gameObject, bool noCollisions = false);
   const std::list<GameObject*>& GetCollisionObjects() { return m_collisionObjects; }
 
-	const bool IsActive() { return m_active; }
 	const bool IsVisible() { return m_visible; }
 	const bool AcceptsInput() { return m_acceptsInput; }
+  const bool ShouldUpdateGame() { IsActive() && m_scriptManager->ShouldUpdateGame(); }
 
 private:
+  // This should not be used to check whether we should update, but rather is used in the ShouldUpdateGame function which sould be used instead
+  const bool IsActive() { return m_active; }
+
 	// ScreenManager pointer
 	ScreenManager* m_screenManager;
 

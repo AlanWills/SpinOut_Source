@@ -195,6 +195,7 @@
     <ClInclude Include="Lesson1RacetrackScreen.h" />
     <ClInclude Include="Lesson2RacetrackScreen.h" />
     <ClInclude Include="Lesson3RacetrackScreen.h" />
+    <ClInclude Include="Lesson4RacetrackScreen.h" />
     <ClInclude Include="LevelDesignDecal.h" />
     <ClInclude Include="LevelDesignObject.h" />
     <ClInclude Include="LevelDesignScreen.h" />
@@ -228,8 +229,9 @@
     <ClInclude Include="TilemapData.h" />
     <ClInclude Include="tinyxml2.h" />
     <ClInclude Include="TouchInput.h" />
-    <ClInclude Include="TransitionOnEnterScript.h" />
+    <ClInclude Include="TransitionOnKeyPressScript.h" />
     <ClInclude Include="UIObject.h" />
+    <ClInclude Include="WaitForKeyPressScript.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddTextBoxScript.cpp" />
@@ -261,6 +263,7 @@
     <ClCompile Include="Lesson1RacetrackScreen.cpp" />
     <ClCompile Include="Lesson2RacetrackScreen.cpp" />
     <ClCompile Include="Lesson3RacetrackScreen.cpp" />
+    <ClCompile Include="Lesson4RacetrackScreen.cpp" />
     <ClCompile Include="LevelDesignDecal.cpp" />
     <ClCompile Include="LevelDesignObject.cpp" />
     <ClCompile Include="LevelDesignScreen.cpp" />
@@ -303,8 +306,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TouchInput.cpp" />
-    <ClCompile Include="TransitionOnEnterScript.cpp" />
+    <ClCompile Include="TransitionOnKeyPressScript.cpp" />
     <ClCompile Include="UIObject.cpp" />
+    <ClCompile Include="WaitForKeyPressScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
@@ -336,6 +340,7 @@
     <Image Include="AntiClockwiseLeftTurn.png" />
     <Image Include="Lesson2Thumbnail.png" />
     <Image Include="Lesson3Thumbnail.png" />
+    <Image Include="Lesson4Thumbnail.png" />
     <Image Include="Level1.png" />
     <Image Include="Lesson1Thumbnail.png" />
     <Image Include="lights.png" />
@@ -464,11 +469,11 @@
   <ItemGroup>
     <Xml Include="ChooseDrivingLessonScreen.xml" />
     <Xml Include="Corvette.xml" />
-    <Xml Include="DrivingLessonScreen.xml" />
     <Xml Include="GarageScreen.xml" />
     <Xml Include="Lesson1RacetrackScreen.xml" />
     <Xml Include="Lesson2RacetrackScreen.xml" />
     <Xml Include="Lesson3RacetrackScreen.xml" />
+    <Xml Include="Lesson4RacetrackScreen.xml" />
     <Xml Include="LevelDesignScreen.xml" />
     <Xml Include="MainMenuScreen.xml" />
     <Xml Include="RaceScreen.xml" />

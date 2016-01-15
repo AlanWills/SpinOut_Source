@@ -41,7 +41,7 @@ void Game::Initialize(HWND window, int width, int height)
     
     m_screenManager = new ScreenManager(m_d3dDevice.Get(), m_d3dContext.Get(), (float)m_outputWidth, (float)m_outputHeight);
     m_screenManager->AddScreen(new MainMenuScreen(m_screenManager));
-    //m_screenManager->AddScreen(new RacetrackLevelDesignScreen(m_screenManager, "LevelDesignScreen.xml", "Lesson3RacetrackScreen.xml"));
+    //m_screenManager->AddScreen(new RacetrackLevelDesignScreen(m_screenManager, "LevelDesignScreen.xml", "Lesson4RacetrackScreen.xml"));
     m_screenManager->LoadContent();
     m_screenManager->Initialize();
 }

@@ -7,7 +7,7 @@
 #include "PlayerData.h"
 
 #include "AddTextBoxScript.h"
-#include "TransitionOnEnterScript.h"
+#include "TransitionOnKeyPressScript.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 Lesson1RacetrackScreen::Lesson1RacetrackScreen(ScreenManager* screenManager, const std::string& dataAsset, unsigned int checkPoint) :
@@ -44,7 +44,7 @@ void Lesson1RacetrackScreen::AddInitialScripts()
   AddScript(new CheckLeftAndRightTurnScript(playerCar));
   AddScript(new AddTextBoxScript(L"Great!"));
   AddScript(new AddTextBoxScript(L"That's it for this lesson.\nFeel free to carry on driving,\nor press 'Enter' to go to the next lesson."));
-  AddScript(new TransitionOnEnterScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson2RacetrackScreen.xml")));
+  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson2RacetrackScreen.xml"), Keyboard::Keys::Enter));
 }
 
 
