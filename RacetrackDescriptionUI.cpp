@@ -34,14 +34,16 @@ void RacetrackDescriptionUI::LoadContent(ID3D11Device* device)
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackDescriptionUI::AddInitialUI()
 {
+  const float spacing = ScreenManager::GetScreenDimensions().y * 0.05f;
+
   // Add the thumbnail to the centre of the screen
   Image* image = new Image(Vector2(400, 400), Vector2::Zero, m_racetrackScreenData->GetThumbnailAsset());
   AddUIObject(image);
 
   // Add the name of the race track
-  Label* trackName = new Label(Vector2(0, - (100 + image->GetSize().y * 0.5f)), GenericUtils::CharToWChar(m_racetrackScreenData->GetTrackName()), image);
+  Label* trackName = new Label(Vector2(0, - (spacing + image->GetSize().y * 0.5f)), GenericUtils::CharToWChar(m_racetrackScreenData->GetTrackName()), image);
   AddUIObject(trackName);
 
-  Label* trackDescription = new Label(Vector2(0, 100 + image->GetSize().y * 0.5f), GenericUtils::CharToWChar(m_racetrackScreenData->GetDescription()), image);
+  Label* trackDescription = new Label(Vector2(0, spacing + image->GetSize().y * 0.5f), GenericUtils::CharToWChar(m_racetrackScreenData->GetDescription()), image);
   AddUIObject(trackDescription);
 }

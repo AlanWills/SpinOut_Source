@@ -38,6 +38,11 @@ distribution.
 #   include <cstring>
 #endif
 
+/// For the Vector2 attributes
+#include "SimpleMath.h"
+#include <string.h>
+using namespace DirectX::SimpleMath;
+
 /*
    TODO: intern strings instead of allocation.
 */
@@ -1274,6 +1279,19 @@ public:
         }
         return a->QueryFloatValue( value );
     }
+    /// Custom function for Vector2
+    XMLError QueryVector2Attribute(const char* name, Vector2* vector) const
+    {
+      std::string xName(name);
+      xName += "x";
+      XMLError error = QueryFloatAttribute(xName.c_str(), &vector->x);
+
+      std::string yName(name);
+      yName += "y";
+      error = QueryFloatAttribute(yName.c_str(), &vector->y);
+
+      return error;
+    }
 
 	
     /** Given an attribute name, QueryAttribute() returns
@@ -1342,6 +1360,19 @@ public:
     void SetAttribute( const char* name, float value )		{
         XMLAttribute* a = FindOrCreateAttribute( name );
         a->SetAttribute( value );
+    }
+    /// Sets a Vector2 Attribute
+    void SetAttribute(const char* name, Vector2 value)
+    {
+      std::string xName(name);
+      xName += "x";
+      XMLAttribute* attrX = FindOrCreateAttribute(xName.c_str());
+      attrX->SetAttribute(value.x);
+
+      std::string yName(name);
+      yName += "y";
+      XMLAttribute* attrY = FindOrCreateAttribute(yName.c_str());
+      attrY->SetAttribute(value.y);
     }
 
     /**
