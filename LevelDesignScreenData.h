@@ -33,9 +33,8 @@ private:
 template <typename T>
 T* LevelDesignScreenData::DeserializeLevelObject(const tinyxml2::XMLElement* element)
 {
-  float gridX = 0, gridY = 0;
-  element->QueryFloatAttribute("x", &gridX);
-  element->QueryFloatAttribute("y", &gridY);
+  Vector2 position;
+  element->QueryVector2Attribute("position", &position);
 
   std::string dataAsset(element->GetText());
 
@@ -45,7 +44,7 @@ T* LevelDesignScreenData::DeserializeLevelObject(const tinyxml2::XMLElement* ele
   bool hasCollider = false;
   element->QueryBoolAttribute("collider", &hasCollider);
 
-  T* levelObject = new T(Vector2(gridX, gridY), dataAsset, hasCollider);
+  T* levelObject = new T(position, dataAsset, hasCollider);
   levelObject->SetLocalRotation(rotation);
 
   return levelObject;

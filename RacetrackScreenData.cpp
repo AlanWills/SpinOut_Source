@@ -145,11 +145,10 @@ void RacetrackScreenData::FindTrackPoints(std::vector<Vector2>& trackPoints) con
 
   for (const tinyxml2::XMLElement* child = trackPointContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
-    float x = 0, y = 0;
-    child->QueryFloatAttribute("x", &x);
-    child->QueryFloatAttribute("y", &y);
+    Vector2 trackPoint;
+    child->QueryVector2Attribute("position", &trackPoint);
 
-    trackPoints.push_back(Vector2(x, y));
+    trackPoints.push_back(trackPoint);
   }
 }
 
@@ -159,14 +158,13 @@ RacetrackObjectInfo RacetrackScreenData::DeserializeObject(const tinyxml2::XMLEl
 {
   RacetrackObjectInfo info;
 
-  float gridX = 0, gridY = 0;
-  element->QueryFloatAttribute("x", &gridX);
-  element->QueryFloatAttribute("y", &gridY);
+  Vector2 position;
+  element->QueryVector2Attribute("position", &position);
 
   float rotation = 0;
   element->QueryFloatAttribute("rotation", &rotation);
 
-  info.m_position = Vector2(gridX, gridY);
+  info.m_position = position;
   info.m_dataAsset = element->GetText();
   info.m_rotation = rotation;
 

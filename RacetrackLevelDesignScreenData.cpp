@@ -33,8 +33,7 @@ void RacetrackLevelDesignScreenData::SerializeTrackPoints(const std::list<Vector
   for (const Vector2& trackPoint : trackPoints)
   {
     tinyxml2::XMLElement* element = xmlDocument->NewElement("TrackPoint");
-    element->SetAttribute("x", trackPoint.x);
-    element->SetAttribute("y", trackPoint.y);
+    element->SetAttribute("position", trackPoint);
 
     if (previousTrackPointElement)
     {
@@ -65,10 +64,9 @@ void RacetrackLevelDesignScreenData::DeserializeTrackPoints(std::list<Vector2>& 
 
   for (const tinyxml2::XMLElement* child = trackPointContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
-    float x = 0, y = 0;
-    child->QueryFloatAttribute("x", &x);
-    child->QueryFloatAttribute("y", &y);
+    Vector2 trackPoint;
+    child->QueryVector2Attribute("position", &trackPoint);
 
-    trackPoints.push_back(Vector2(x, y));
+    trackPoints.push_back(trackPoint);
   }
 }

@@ -98,9 +98,7 @@ XMLElement* LevelDesignScreenData::SerializeLevelObject(
   tinyxml2::XMLElement* levelObjectElement = document->NewElement(name.c_str());
   levelObjectElement->SetText(levelObject->GetDataAsset().c_str());
 
-  levelObjectElement->SetAttribute("x", levelObject->GetWorldPosition().x);
-  levelObjectElement->SetAttribute("y", levelObject->GetWorldPosition().y);
-
+  levelObjectElement->SetAttribute("position", levelObject->GetWorldPosition());
   levelObjectElement->SetAttribute("rotation", levelObject->GetWorldRotation());
   levelObjectElement->SetAttribute("collider", levelObject->HasCollider());
 

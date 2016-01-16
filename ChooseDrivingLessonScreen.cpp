@@ -43,7 +43,7 @@ void ChooseDrivingLessonScreen::AddInitialUI()
     AddScreenUIObject(lesson.second);
   }
 
-  Button* playButton = new Button(Vector2(GetScreenCentre().x, GetScreenDimensions().y * 0.95f), L"Go Race");
+  Button* playButton = new Button(Vector2(GetScreenCentre().x, GetScreenDimensions().y * 0.9f), L"Go Race");
   playButton->SetClickFunction([this]()
   {
     Transition(RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), m_lessons[m_currentLesson].first));
