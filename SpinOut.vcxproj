@@ -202,6 +202,7 @@
     <ClInclude Include="LevelDesignScreenData.h" />
     <ClInclude Include="LevelDesignStartingPosition.h" />
     <ClInclude Include="LevelDesignTile.h" />
+    <ClInclude Include="LoadingScreen.h" />
     <ClInclude Include="MainMenuScreen.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="Menu.h" />
@@ -210,6 +211,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PlayerCar.h" />
     <ClInclude Include="PlayerData.h" />
+    <ClInclude Include="PrizeScreen.h" />
     <ClInclude Include="RacetrackDescriptionUI.h" />
     <ClInclude Include="RacetrackScreenFactory.h" />
     <ClInclude Include="RacetrackScreen.h" />
@@ -221,6 +223,7 @@
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="Script.h" />
     <ClInclude Include="ScriptManager.h" />
+    <ClInclude Include="StartupLogoScreen.h" />
     <ClInclude Include="StepTimer.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="Texture2D.h" />
@@ -270,6 +273,7 @@
     <ClCompile Include="LevelDesignScreenData.cpp" />
     <ClCompile Include="LevelDesignStartingPosition.cpp" />
     <ClCompile Include="LevelDesignTile.cpp" />
+    <ClCompile Include="LoadingScreen.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenuScreen.cpp" />
     <ClCompile Include="MathUtils.cpp" />
@@ -283,6 +287,7 @@
     </ClCompile>
     <ClCompile Include="PlayerCar.cpp" />
     <ClCompile Include="PlayerData.cpp" />
+    <ClCompile Include="PrizeScreen.cpp" />
     <ClCompile Include="RacetrackDescriptionUI.cpp" />
     <ClCompile Include="RacetrackScreenFactory.cpp" />
     <ClCompile Include="RacetrackScreen.cpp" />
@@ -294,6 +299,7 @@
     <ClCompile Include="ScreenManager.cpp" />
     <ClCompile Include="Script.cpp" />
     <ClCompile Include="ScriptManager.cpp" />
+    <ClCompile Include="StartupLogoScreen.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="Texture2D.cpp" />
     <ClCompile Include="Tile.cpp" />

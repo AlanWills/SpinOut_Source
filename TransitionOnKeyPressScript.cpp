@@ -5,10 +5,9 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 TransitionOnKeyPressScript::TransitionOnKeyPressScript(ScreenManager* screenManager, BaseScreen* transitionTo, Keyboard::Keys key, bool shouldUpdateGame, bool canRun) :
-  Script(shouldUpdateGame, canRun),
+  WaitForKeyPressScript(key, shouldUpdateGame, canRun),
   m_screenManager(screenManager),
-  m_transitionTo(transitionTo),
-  m_key(key)
+  m_transitionTo(transitionTo)
 {
 }
 
@@ -22,11 +21,12 @@ TransitionOnKeyPressScript::~TransitionOnKeyPressScript()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void TransitionOnKeyPressScript::HandleInput(float elapsedSeconds)
 {
+  WaitForKeyPressScript::HandleInput(elapsedSeconds);
+
   if (IsRunning())
   {
-    if (m_key == Keyboard::Keys::NumKeys || m_screenManager->GetKeyboardInput().IsKeyPressed(m_key))
+    if (IsCompleted())
     {
-      SetCompleted(true);
       m_screenManager->Transition(m_screenManager->GetCurrentScreen(), m_transitionTo);
     }
   }

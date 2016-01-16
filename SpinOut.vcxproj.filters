@@ -196,6 +196,12 @@
     <Filter Include="Header Files\Screens\Menus">
       <UniqueIdentifier>{43c1ae6b-221f-4bd1-bdda-7cda2b1d26cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Screens\Splash Screens">
+      <UniqueIdentifier>{ee3d9d74-f010-4514-b303-e2d8e14d16a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens\Splash Screens">
+      <UniqueIdentifier>{8afce6e2-baa6-41fc-ab4d-5ee555888b33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -399,6 +405,15 @@
     <ClInclude Include="TransitionOnKeyPressScript.h">
       <Filter>Header Files\Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="LoadingScreen.h">
+      <Filter>Header Files\Screens\Splash Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="PrizeScreen.h">
+      <Filter>Header Files\Screens\Splash Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="StartupLogoScreen.h">
+      <Filter>Header Files\Screens\Splash Screens</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -595,6 +610,15 @@
     </ClCompile>
     <ClCompile Include="TransitionOnKeyPressScript.cpp">
       <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingScreen.cpp">
+      <Filter>Source Files\Screens\Splash Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="PrizeScreen.cpp">
+      <Filter>Source Files\Screens\Splash Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="StartupLogoScreen.cpp">
+      <Filter>Source Files\Screens\Splash Screens</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
