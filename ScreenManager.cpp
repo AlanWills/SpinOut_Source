@@ -198,7 +198,7 @@ void ScreenManager::Transition(BaseScreen* transitionFrom, BaseScreen* transitio
   assert(screenExists);
 
   // Want to do the same as BaseScreen transition here and add a loading screen if necessary
-  if (dynamic_cast<GameplayScreen*>(transitionTo) && !dynamic_cast<LoadingScreen*>(this))
+  if (dynamic_cast<GameplayScreen*>(transitionTo) && !dynamic_cast<LoadingScreen*>(transitionFrom))
   {
     AddScreen(new LoadingScreen(this, transitionTo));
   }

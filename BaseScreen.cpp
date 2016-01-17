@@ -181,17 +181,7 @@ void BaseScreen::HandleInput(float elapsedSeconds)
 //-----------------------------------------------------------------------------------------------------------------------------------
 void BaseScreen::Transition(BaseScreen* transitionTo, bool load, bool initialize)
 {
-  // If we have a gameplay screen, we should transition to a loading screen first (unless we are IN loading screen)
-  if (dynamic_cast<GameplayScreen*>(transitionTo) && !dynamic_cast<LoadingScreen*>(this))
-  {
-    m_screenManager->AddScreen(new LoadingScreen(GetScreenManager(), transitionTo));
-  }
-  else
-  {
-    m_screenManager->AddScreen(transitionTo, load, initialize);
-  }
-	
-	m_screenManager->RemoveScreen(this);
+  GetScreenManager()->Transition(this, transitionTo, load, initialize);
 }
 
 

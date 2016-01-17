@@ -25,6 +25,7 @@ void WaitScript::Run(float elapsedSeconds)
 
   if (IsRunning())
   {
-    SetCompleted(m_time >= GetTimeRunFor());
+    bool done = m_time <= GetTimeRunFor();
+    SetCompleted(done);
   }
 }

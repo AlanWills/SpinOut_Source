@@ -29,5 +29,5 @@ void LoadingScreen::Begin()
   // but don't want to immediately show it - a nice pause for effect (could be removed at a later date
   // if we load larger stuff)
   AddScript(new WaitScript(1, false));
-  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), m_screenToTransitionTo, Keyboard::Keys::NumKeys), false);
+  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), m_screenToTransitionTo, Keyboard::Keys::NumKeys, false));
 }
