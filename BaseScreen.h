@@ -96,7 +96,7 @@ protected:
   void AddScript(Script* script, Script* previousScript);
   Script* GetLastAddedScript() const { return m_scriptManager->GetLastAddedScript(); }
 
-	void Transition(BaseScreen* transitionTo);
+	void Transition(BaseScreen* transitionTo, bool load = true, bool initialize = true);
 
 	/// \brief Get a pointer to the ScreenManager
 	ScreenManager* GetScreenManager() const { return m_screenManager; }
@@ -113,13 +113,15 @@ protected:
   void AddCollisionObject(GameObject* gameObject, bool noCollisions = false);
   const std::list<GameObject*>& GetCollisionObjects() { return m_collisionObjects; }
 
-	const bool IsVisible() { return m_visible; }
-	const bool AcceptsInput() { return m_acceptsInput; }
-  const bool ShouldUpdateGame() { return IsActive() && m_scriptManager->ShouldUpdateGame(); }
+  bool IsLoaded() const { return m_loaded; }
+  bool IsInitialized() const { return m_initialized; }
+	bool IsVisible() const { return m_visible; }
+	bool AcceptsInput() const { return m_acceptsInput; }
+  bool ShouldUpdateGame() const { return IsActive() && m_scriptManager->ShouldUpdateGame(); }
 
 private:
   // This should not be used to check whether we should update, but rather is used in the ShouldUpdateGame function which sould be used instead
-  const bool IsActive() { return m_active; }
+  bool IsActive() const { return m_active; }
 
 	// ScreenManager pointer
 	ScreenManager* m_screenManager;
@@ -134,6 +136,8 @@ private:
 	std::unique_ptr<BaseScreenData> m_baseScreenData;
 
 	// States variables
+  bool m_loaded;    // If true, LoadContent has been called on this screen
+  bool m_initialized;  // If true, Initialize has been called on this screen
 	bool m_begun;			// If false, we will run the Begin function in the first loop of this screen's update
 	bool m_active;			// If true the screen updates
 	bool m_visible;			// If true the screen renders

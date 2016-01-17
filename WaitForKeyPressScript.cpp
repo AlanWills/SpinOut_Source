@@ -23,6 +23,6 @@ void WaitForKeyPressScript::HandleInput(float elapsedSeconds)
 {
   if (IsRunning())
   {
-    SetCompleted(ScreenManager::GetKeyboardInput().IsKeyPressed(m_keyToPress));
+    SetCompleted(m_keyToPress == Keyboard::Keys::NumKeys || ScreenManager::GetKeyboardInput().IsKeyPressed(m_keyToPress));
   }
 }

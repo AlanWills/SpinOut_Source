@@ -235,6 +235,7 @@
     <ClInclude Include="TransitionOnKeyPressScript.h" />
     <ClInclude Include="UIObject.h" />
     <ClInclude Include="WaitForKeyPressScript.h" />
+    <ClInclude Include="WaitScript.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddTextBoxScript.cpp" />
@@ -315,6 +316,7 @@
     <ClCompile Include="TransitionOnKeyPressScript.cpp" />
     <ClCompile Include="UIObject.cpp" />
     <ClCompile Include="WaitForKeyPressScript.cpp" />
+    <ClCompile Include="WaitScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
@@ -481,8 +483,11 @@
     <Xml Include="Lesson3RacetrackScreen.xml" />
     <Xml Include="Lesson4RacetrackScreen.xml" />
     <Xml Include="LevelDesignScreen.xml" />
+    <Xml Include="LoadingScreen.xml" />
     <Xml Include="MainMenuScreen.xml" />
+    <Xml Include="PrizeScreen.xml" />
     <Xml Include="RaceScreen.xml" />
+    <Xml Include="StartupLogoScreen.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Font.spritefont" />

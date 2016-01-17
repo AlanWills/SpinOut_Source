@@ -414,6 +414,9 @@
     <ClInclude Include="StartupLogoScreen.h">
       <Filter>Header Files\Screens\Splash Screens</Filter>
     </ClInclude>
+    <ClInclude Include="WaitScript.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -619,6 +622,9 @@
     </ClCompile>
     <ClCompile Include="StartupLogoScreen.cpp">
       <Filter>Source Files\Screens\Splash Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitScript.cpp">
+      <Filter>Source Files\Scripts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1107,6 +1113,15 @@
     </Xml>
     <Xml Include="Lesson4RacetrackScreen.xml">
       <Filter>Resource Files\Data\Tracks\Lessons</Filter>
+    </Xml>
+    <Xml Include="StartupLogoScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+    <Xml Include="PrizeScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
+    </Xml>
+    <Xml Include="LoadingScreen.xml">
+      <Filter>Resource Files\Data\Screens</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

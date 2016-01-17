@@ -1,5 +1,8 @@
 #include "pch.h"
+
 #include "ScreenManager.h"
+#include "LoadingScreen.h"
+#include "GameplayScreen.h"
 
 static Vector2 m_screenCentre;
 static Camera m_camera;
@@ -156,10 +159,17 @@ BaseScreen* ScreenManager::GetCurrentScreen()
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void ScreenManager::AddScreen(BaseScreen* screenToAdd)
+void ScreenManager::AddScreen(BaseScreen* screenToAdd, bool load, bool initialize)
 {
-	screenToAdd->LoadContent();
-	screenToAdd->Initialize();
+  if (load)
+  {
+    screenToAdd->LoadContent();
+  }
+
+  if (initialize)
+  {
+    screenToAdd->Initialize();
+  }
 
 	// push_front is a MUST
 	// Subtle reason why - if we push_back, if we transition from one screen to another, we will handle input on that screen in the same update loop
@@ -176,7 +186,7 @@ void ScreenManager::RemoveScreen(BaseScreen* screenToRemove)
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void ScreenManager::Transition(BaseScreen* transitionFrom, BaseScreen* transitionTo)
+void ScreenManager::Transition(BaseScreen* transitionFrom, BaseScreen* transitionTo, bool load, bool initialize)
 {
   // Want to make sure that our screen exists to delete
   bool screenExists = false;
@@ -187,6 +197,15 @@ void ScreenManager::Transition(BaseScreen* transitionFrom, BaseScreen* transitio
 
   assert(screenExists);
 
-  AddScreen(transitionTo);
+  // Want to do the same as BaseScreen transition here and add a loading screen if necessary
+  if (dynamic_cast<GameplayScreen*>(transitionTo) && !dynamic_cast<LoadingScreen*>(this))
+  {
+    AddScreen(new LoadingScreen(this, transitionTo));
+  }
+  else
+  {
+    AddScreen(transitionTo, load, initialize);
+  }
+
   RemoveScreen(transitionFrom);
 }

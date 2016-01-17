@@ -23,11 +23,11 @@ public:
 	void HandleInput(float elapsedSeconds);
 
 	/// \brief Add a screen (will automatically load and initialize for you)
-	void AddScreen(BaseScreen* screenToAdd);
+	void AddScreen(BaseScreen* screenToAdd, bool load = true, bool initialize = true);
 	void RemoveScreen(BaseScreen* screenToAdd);
 
   /// \brief Mirror function for screens, but requires screen you are transitioning from too
-  void Transition(BaseScreen* transitionFrom, BaseScreen* transitionTo);
+  void Transition(BaseScreen* transitionFrom, BaseScreen* transitionTo, bool load = true, bool initialize = true);
 
   ID3D11Device* GetDevice() const { return m_device; }
 

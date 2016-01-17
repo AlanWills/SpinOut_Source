@@ -5,7 +5,7 @@
 #include "pch.h"
 #include "Game.h"
 
-#include "MainMenuScreen.h"
+#include "StartupLogoScreen.h"
 #include "RacetrackLevelDesignScreen.h"
 
 using namespace DirectX;
@@ -40,7 +40,7 @@ void Game::Initialize(HWND window, int width, int height)
     m_timer.SetTargetElapsedSeconds(1.0 / 60);
     
     m_screenManager = new ScreenManager(m_d3dDevice.Get(), m_d3dContext.Get(), (float)m_outputWidth, (float)m_outputHeight);
-    m_screenManager->AddScreen(new MainMenuScreen(m_screenManager));
+    m_screenManager->AddScreen(new StartupLogoScreen(m_screenManager));
     //m_screenManager->AddScreen(new RacetrackLevelDesignScreen(m_screenManager, "LevelDesignScreen.xml", "Lesson4RacetrackScreen.xml"));
     m_screenManager->LoadContent();
     m_screenManager->Initialize();

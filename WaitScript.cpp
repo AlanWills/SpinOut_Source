@@ -8,6 +8,7 @@ WaitScript::WaitScript(float timeToWaitFor, bool shouldUpdateGame, bool canRun) 
   Script(shouldUpdateGame, canRun),
   m_time(timeToWaitFor)
 {
+  assert(timeToWaitFor >= 0);
 }
 
 

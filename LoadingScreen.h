@@ -5,7 +5,12 @@
 class LoadingScreen : public BaseScreen
 {
 public:
-  LoadingScreen(ScreenManager* screenManager, const std::string& dataAsset = "LoadingScreen.xml");
+  LoadingScreen(ScreenManager* screenManager, BaseScreen* screenToTransitionTo, const std::string& dataAsset = "LoadingScreen.xml");
   ~LoadingScreen();
+
+  void Begin() override;
+
+private:
+  BaseScreen* m_screenToTransitionTo;
 };
 

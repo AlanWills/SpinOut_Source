@@ -1,7 +1,9 @@
 #include "pch.h"
 
-#include "BaseScreen.h"
 #include "ScreenManager.h"
+#include "BaseScreen.h"
+#include "LoadingScreen.h"
+#include "GameplayScreen.h"
 
 #include "Label.h"
 
@@ -12,6 +14,8 @@ m_screenManager(screenManager),
 m_scriptManager(new ScriptManager(this)),
 m_device(screenManager->GetDevice()),
 m_baseScreenData(new BaseScreenData(dataAsset)),
+m_loaded(false),
+m_initialized(false),
 m_begun(false),
 m_active(false),
 m_visible(false),
@@ -34,6 +38,11 @@ BaseScreen::~BaseScreen()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void BaseScreen::LoadContent()
 {
+  if (m_loaded)
+  {
+    return;
+  }
+
 	m_baseScreenData->LoadData();
 
 	AddInitialUI();
@@ -41,6 +50,8 @@ void BaseScreen::LoadContent()
 	m_gameObjects->LoadContent();
 	m_inGameUIObjects->LoadContent();
 	m_screenUIObjects->LoadContent();
+
+  m_loaded = true;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -58,6 +69,11 @@ void BaseScreen::AddInitialUI()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void BaseScreen::Initialize()
 {
+  if (m_initialized)
+  {
+    return;
+  }
+
 	m_gameObjects->Initialize();
 	m_inGameUIObjects->Initialize();
 	m_screenUIObjects->Initialize();
@@ -70,6 +86,7 @@ void BaseScreen::Initialize()
   AddInitialScripts();
   m_scriptManager->LoadAndInit();
 
+  m_initialized = true;
 	m_alive = true;
 	Show();
 }
@@ -162,9 +179,18 @@ void BaseScreen::HandleInput(float elapsedSeconds)
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void BaseScreen::Transition(BaseScreen* transitionTo)
+void BaseScreen::Transition(BaseScreen* transitionTo, bool load, bool initialize)
 {
-	m_screenManager->AddScreen(transitionTo);
+  // If we have a gameplay screen, we should transition to a loading screen first (unless we are IN loading screen)
+  if (dynamic_cast<GameplayScreen*>(transitionTo) && !dynamic_cast<LoadingScreen*>(this))
+  {
+    m_screenManager->AddScreen(new LoadingScreen(GetScreenManager(), transitionTo));
+  }
+  else
+  {
+    m_screenManager->AddScreen(transitionTo, load, initialize);
+  }
+	
 	m_screenManager->RemoveScreen(this);
 }
 
