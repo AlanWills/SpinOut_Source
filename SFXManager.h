@@ -22,6 +22,7 @@ public:
 private:
   SFXManager();
 
+  typedef std::pair<std::string, std::unique_ptr<SoundEffect>> SoundEffectPair;
   typedef std::unordered_map<std::string, std::unique_ptr<SoundEffect>> SoundEffects;
 
   SoundEffects m_soundEffects;

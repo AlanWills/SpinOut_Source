@@ -13,6 +13,8 @@ SFXManager::SFXManager() :
 //-----------------------------------------------------------------------------------------------------------------------------------
 SFXManager::~SFXManager()
 {
+  // Don't know why, but this has to be called otherwise we get an exception
+  m_audioEngine->Suspend();
 }
 
 

@@ -14,6 +14,8 @@ MusicManager::MusicManager() :
 //-----------------------------------------------------------------------------------------------------------------------------------
 MusicManager::~MusicManager()
 {
+  // Don't know why, but this has to be called otherwise we get an exception
+  m_audioEngine->Suspend();
 }
 
 
@@ -64,8 +66,7 @@ void MusicManager::SetPlaylist(const std::list<std::wstring>& songs, PlaylistSet
 
   for (const std::wstring& songName : songs)
   {
-    SoundEffect* song = new SoundEffect(m_audioEngine.get(), songName.c_str());
-    m_playlist.push_back(Song(song));
+    m_playlist.push_back(Song(new SoundEffect(m_audioEngine.get(), songName.c_str())));
   }
 
   m_currentSong = 0;
