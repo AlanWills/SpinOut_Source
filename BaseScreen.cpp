@@ -8,6 +8,7 @@
 #include "GameplayScreen.h"
 
 #include "Label.h"
+#include "Image.h"
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -60,7 +61,7 @@ void BaseScreen::LoadContent()
 void BaseScreen::AddInitialUI()
 {
 	// This has to be separate so we can draw it behind all the other objects
-	m_background.reset(new UIObject(GetScreenCentre() * 2, GetScreenCentre(), m_baseScreenData->GetBackgroundAsset(), BaseObject::LoadType::kTexture));
+	m_background.reset(new Image(GetScreenCentre(), m_baseScreenData->GetBackgroundAsset()));
 	m_background->LoadContent(GetDevice());
   m_background->SetShouldHaveCollider(false);
 

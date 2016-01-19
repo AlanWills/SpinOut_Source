@@ -1101,6 +1101,9 @@
     <Image Include="SpinOutMainMenuScreen.jpg">
       <Filter>Resource Files\Sprites\Backgrounds</Filter>
     </Image>
+    <Image Include="Logo.png">
+      <Filter>Resource Files\Sprites\Backgrounds</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="settings.manifest">

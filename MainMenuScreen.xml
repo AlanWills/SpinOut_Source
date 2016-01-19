@@ -2,5 +2,7 @@
 <Root>
   <DisplayName></DisplayName>
   <BackgroundTextureAsset>SpinOutMainMenuScreen.jpg</BackgroundTextureAsset>
-  <MusicAssets></MusicAssets>
+  <MusicAssets>
+    <Track>trance-menu.wav</Track>
+  </MusicAssets>
 </Root>

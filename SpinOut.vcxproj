@@ -359,6 +359,7 @@
     <Image Include="lights.png" />
     <Image Include="light_white.png" />
     <Image Include="light_yellow.png" />
+    <Image Include="Logo.png" />
     <Image Include="Marker.png" />
     <Image Include="oil.png" />
     <Image Include="ClockwiseRightTurn.png" />

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root>
   <DisplayName></DisplayName>
-  <BackgroundTextureAsset>EmptyBackground.png</BackgroundTextureAsset>
-  <MusicAssets>
-    <Track>trance-menu.wav</Track>
-  </MusicAssets>
+  <BackgroundTextureAsset>Logo.png</BackgroundTextureAsset>
+  <MusicAssets/>
 </Root>
