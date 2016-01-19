@@ -1,6 +1,9 @@
 #include "pch.h"
 
 #include "ScreenManager.h"
+#include "MusicManager.h"
+#include "SFXManager.h"
+
 #include "LoadingScreen.h"
 #include "GameplayScreen.h"
 
@@ -81,6 +84,9 @@ void ScreenManager::Initialize()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void ScreenManager::Update(float elapsedSeconds)
 {
+  MusicManager::GetInstance().Update();
+  SFXManager::GetInstance().Update();
+
 	m_keyboard.Update();
 	m_camera.Update(elapsedSeconds);
 	m_gameMouse.Update(elapsedSeconds);

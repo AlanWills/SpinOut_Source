@@ -57,10 +57,10 @@ void RacetrackScreen::LoadLevel()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackScreen::LoadNormalTiles()
 {
-  RacetrackObjects normalTiles;
+  LevelObjects normalTiles;
   m_raceScreenData->FindNormalTiles(normalTiles);
 
-  for (const RacetrackObjectInfo& info : normalTiles)
+  for (const LevelObjectInfo& info : normalTiles)
   {
     GameObject* gameObject = new GameObject(info.m_position, info.m_dataAsset, BaseObject::LoadType::kTexture);
     gameObject->SetLocalRotation(info.m_rotation);
@@ -78,10 +78,10 @@ void RacetrackScreen::LoadNormalTiles()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackScreen::LoadCollisionTiles()
 {
-  RacetrackObjects collisionTiles;
+  LevelObjects collisionTiles;
   m_raceScreenData->FindCollisionTiles(collisionTiles);
 
-  for (const RacetrackObjectInfo& info : collisionTiles)
+  for (const LevelObjectInfo& info : collisionTiles)
   {
     GameObject* gameObject = new GameObject(info.m_position, info.m_dataAsset, BaseObject::LoadType::kTexture);
     gameObject->SetLocalRotation(info.m_rotation);
@@ -99,10 +99,10 @@ void RacetrackScreen::LoadCollisionTiles()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackScreen::LoadNormalDecals()
 {
-  RacetrackObjects normalDecals;
+  LevelObjects normalDecals;
   m_raceScreenData->FindNormalDecals(normalDecals);
 
-  for (const RacetrackObjectInfo& info : normalDecals)
+  for (const LevelObjectInfo& info : normalDecals)
   {
     GameObject* gameObject = new GameObject(info.m_position, info.m_dataAsset, BaseObject::LoadType::kTexture);
     gameObject->SetLocalRotation(info.m_rotation);
@@ -120,10 +120,10 @@ void RacetrackScreen::LoadNormalDecals()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackScreen::LoadCollisionDecals()
 {
-  RacetrackObjects collisionDecals;
+  LevelObjects collisionDecals;
   m_raceScreenData->FindCollisionDecals(collisionDecals);
 
-  for (const RacetrackObjectInfo& info : collisionDecals)
+  for (const LevelObjectInfo& info : collisionDecals)
   {
     GameObject* gameObject = new GameObject(info.m_position, info.m_dataAsset, BaseObject::LoadType::kTexture);
     gameObject->SetLocalRotation(info.m_rotation);
@@ -141,10 +141,10 @@ void RacetrackScreen::LoadCollisionDecals()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackScreen::LoadStartingPoints()
 {
-  RacetrackObjects startingPoints;
+  LevelObjects startingPoints;
   m_raceScreenData->FindStartingPoints(startingPoints);
 
-  for (const RacetrackObjectInfo& info : startingPoints)
+  for (const LevelObjectInfo& info : startingPoints)
   {
     GameObject* gameObject = new GameObject(info.m_position, info.m_dataAsset, BaseObject::LoadType::kTexture);
     gameObject->SetLocalRotation(info.m_rotation);

@@ -38,7 +38,7 @@ const char* RacetrackScreenData::GetThumbnailAsset() const
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void RacetrackScreenData::FindNormalTiles(RacetrackObjects& normalTiles) const
+void RacetrackScreenData::FindNormalTiles(LevelObjects& normalTiles) const
 {
   const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
   const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
@@ -49,7 +49,7 @@ void RacetrackScreenData::FindNormalTiles(RacetrackObjects& normalTiles) const
 
   for (const tinyxml2::XMLElement* child = normalTileContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
-    RacetrackObjectInfo tile = DeserializeObject(child);
+    LevelObjectInfo tile = DeserializeObject(child);
     tile.m_shouldHaveCollider = false;
     normalTiles.push_back(tile);
   }
@@ -57,7 +57,7 @@ void RacetrackScreenData::FindNormalTiles(RacetrackObjects& normalTiles) const
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void RacetrackScreenData::FindCollisionTiles(RacetrackObjects& collisionTiles) const
+void RacetrackScreenData::FindCollisionTiles(LevelObjects& collisionTiles) const
 {
   const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
   const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
@@ -68,7 +68,7 @@ void RacetrackScreenData::FindCollisionTiles(RacetrackObjects& collisionTiles) c
 
   for (const tinyxml2::XMLElement* child = collisionTileContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
-    RacetrackObjectInfo tile = DeserializeObject(child);
+    LevelObjectInfo tile = DeserializeObject(child);
     tile.m_shouldHaveCollider = true;
     collisionTiles.push_back(tile);
   }
@@ -76,7 +76,7 @@ void RacetrackScreenData::FindCollisionTiles(RacetrackObjects& collisionTiles) c
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void RacetrackScreenData::FindNormalDecals(RacetrackObjects& normalDecals) const
+void RacetrackScreenData::FindNormalDecals(LevelObjects& normalDecals) const
 {
   const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
   const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
@@ -87,7 +87,7 @@ void RacetrackScreenData::FindNormalDecals(RacetrackObjects& normalDecals) const
 
   for (const tinyxml2::XMLElement* child = normalDecalContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
-    RacetrackObjectInfo decal = DeserializeObject(child);
+    LevelObjectInfo decal = DeserializeObject(child);
     decal.m_shouldHaveCollider = false;
     normalDecals.push_back(decal);
   }
@@ -95,7 +95,7 @@ void RacetrackScreenData::FindNormalDecals(RacetrackObjects& normalDecals) const
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void RacetrackScreenData::FindCollisionDecals(RacetrackObjects& collisionDecals) const
+void RacetrackScreenData::FindCollisionDecals(LevelObjects& collisionDecals) const
 {
   const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
   const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
@@ -106,7 +106,7 @@ void RacetrackScreenData::FindCollisionDecals(RacetrackObjects& collisionDecals)
 
   for (const tinyxml2::XMLElement* child = collisionDecalContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
-    RacetrackObjectInfo decal = DeserializeObject(child);
+    LevelObjectInfo decal = DeserializeObject(child);
     decal.m_shouldHaveCollider = true;
     collisionDecals.push_back(decal);
   }
@@ -114,7 +114,7 @@ void RacetrackScreenData::FindCollisionDecals(RacetrackObjects& collisionDecals)
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void RacetrackScreenData::FindStartingPoints(RacetrackObjects& startingPoints) const
+void RacetrackScreenData::FindStartingPoints(LevelObjects& startingPoints) const
 {
   const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
   const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
@@ -125,7 +125,7 @@ void RacetrackScreenData::FindStartingPoints(RacetrackObjects& startingPoints) c
 
   for (const tinyxml2::XMLElement* child = startingPointContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
-    RacetrackObjectInfo startingPoint = DeserializeObject(child);
+    LevelObjectInfo startingPoint = DeserializeObject(child);
     startingPoint.m_shouldHaveCollider = false;
     startingPoints.push_back(startingPoint);
   }
@@ -154,9 +154,9 @@ void RacetrackScreenData::FindTrackPoints(std::vector<Vector2>& trackPoints) con
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-RacetrackObjectInfo RacetrackScreenData::DeserializeObject(const tinyxml2::XMLElement* element) const
+LevelObjectInfo RacetrackScreenData::DeserializeObject(const tinyxml2::XMLElement* element) const
 {
-  RacetrackObjectInfo info;
+  LevelObjectInfo info;
 
   Vector2 position;
   element->QueryVector2Attribute("position", &position);

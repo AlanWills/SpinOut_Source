@@ -3,6 +3,10 @@
 #include "ClickableImage.h"
 #include "Label.h"
 
+#include <Audio.h>
+
+#define BUTTON_HOVER_SOUND_ASSET "ButtonHover.wav"
+
 class Button : public ClickableImage
 {
 public:

@@ -1,5 +1,7 @@
 #include "pch.h"
 
+#include "SFXManager.h"
+
 #include "Button.h"
 
 
@@ -15,6 +17,7 @@ Button::Button(const Vector2& size, const Vector2& localPosition, const std::wst
 	ClickableImage(size, localPosition, dataAsset, Sizing::kDoNotPreserveAspectRatio, loadType, parent, lifeTime),
 	m_label(new Label(text, this))
 {
+  SFXManager::GetInstance().AddSoundEffect(BUTTON_HOVER_SOUND_ASSET);
 }
 
 
@@ -69,6 +72,11 @@ void Button::HandleInput(float elapsedSeconds, const Vector2& mousePosition)
 
 	if (AcceptsInput())
 	{
+    if (HasMouseEntered())
+    {
+      SFXManager::GetInstance().PlaySound(BUTTON_HOVER_SOUND_ASSET);
+    }
+
 		if (IsMouseOver() && GetClickState() != ClickState::kPressed)
 		{
 			SetColour(m_highlightedColour);

@@ -208,6 +208,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="MenuScreen.h" />
     <ClInclude Include="MouseButton.h" />
+    <ClInclude Include="MusicManager.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PlayerCar.h" />
     <ClInclude Include="PlayerData.h" />
@@ -223,6 +224,7 @@
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="Script.h" />
     <ClInclude Include="ScriptManager.h" />
+    <ClInclude Include="SFXManager.h" />
     <ClInclude Include="StartupLogoScreen.h" />
     <ClInclude Include="StepTimer.h" />
     <ClInclude Include="TextBox.h" />
@@ -280,6 +282,7 @@
     <ClCompile Include="MathUtils.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
+    <ClCompile Include="MusicManager.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -300,6 +303,7 @@
     <ClCompile Include="ScreenManager.cpp" />
     <ClCompile Include="Script.cpp" />
     <ClCompile Include="ScriptManager.cpp" />
+    <ClCompile Include="SFXManager.cpp" />
     <ClCompile Include="StartupLogoScreen.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="Texture2D.cpp" />
@@ -342,6 +346,7 @@
     <Image Include="EmptyBackground.png" />
     <Image Include="AntiClockwiseRightTurn.png" />
     <Image Include="ClockwiseLeftTurn.png" />
+    <Image Include="FadeOutScreen.png" />
     <Image Include="GreenBackground.png" />
     <Image Include="GridLine.png" />
     <Image Include="land_grass11.png" />
@@ -456,6 +461,7 @@
     <Image Include="skidmark_short_1.png" />
     <Image Include="skidmark_short_2.png" />
     <Image Include="skidmark_short_3.png" />
+    <Image Include="SpinOutMainMenuScreen.jpg" />
     <Image Include="tent_blue.png" />
     <Image Include="tent_blue_large.png" />
     <Image Include="tent_red.png" />
@@ -496,6 +502,11 @@
     <ProjectReference Include="DirectXTK-master\DirectXTK_Desktop_2015_Win10.vcxproj">
       <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="ButtonHover.wav" />
+    <Media Include="Z:\Music\Insert_Coin.wav" />
+    <Media Include="Z:\Music\trance-menu.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

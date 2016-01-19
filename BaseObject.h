@@ -141,7 +141,8 @@ protected:
 	/// \brief Gets the texture handler - cannot be const because draw is non-const (for now)
 	virtual Texture2D* GetTexture() const { return m_textureHandler.get(); }
 
-	const bool IsMouseOver() const { return m_mouseOver; }
+	bool IsMouseOver() const { return m_mouseOver; }
+  bool HasMouseEntered() const { return m_mouseEntered; }
 	void SetMouseOver(const bool mouseOver) { m_mouseOver = mouseOver; }
 
 	const Color& GetColour() const { return m_colour; }
@@ -182,6 +183,7 @@ private:
 	// And whether it is selected
   // And whether it has just been clicked - will only last one loop from when it was selected
 	bool m_mouseOver;
+  bool m_mouseEntered;
 	bool m_selected[static_cast<unsigned int>(MouseButton::kNumButtons)];
   bool m_clicked[static_cast<unsigned int>(MouseButton::kNumButtons)];
 

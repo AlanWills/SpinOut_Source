@@ -2,6 +2,8 @@
 
 #include "BaseData.h"
 
+#include <list>
+
 class BaseScreenData : public BaseData
 {
 public:
@@ -10,5 +12,6 @@ public:
 
 	const std::wstring GetDisplayName() const;
 	const char* GetBackgroundAsset() const;
+  std::list<std::wstring> GetMusicAssets() const;
 };
 

@@ -2,4 +2,5 @@
 <Root>
   <DisplayName>Choose Driving Lesson</DisplayName>
   <BackgroundTextureAsset>EmptyBackground.png</BackgroundTextureAsset>
+  <MusicAssets></MusicAssets>
 </Root>

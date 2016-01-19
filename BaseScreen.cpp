@@ -1,6 +1,8 @@
 #include "pch.h"
 
 #include "ScreenManager.h"
+#include "MusicManager.h"
+
 #include "BaseScreen.h"
 #include "LoadingScreen.h"
 #include "GameplayScreen.h"
@@ -96,6 +98,8 @@ void BaseScreen::Initialize()
 void BaseScreen::Begin()
 {
 	m_begun = true;
+
+  MusicManager::GetInstance().SetPlaylist(m_baseScreenData->GetMusicAssets());
 }
 
 

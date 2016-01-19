@@ -2,4 +2,7 @@
 <Root>
   <DisplayName></DisplayName>
   <BackgroundTextureAsset>EmptyBackground.png</BackgroundTextureAsset>
+  <MusicAssets>
+    <Track>trance-menu.wav</Track>
+  </MusicAssets>
 </Root>

@@ -33,6 +33,7 @@ m_parent(parent),
 m_textureHandler(nullptr),
 m_size(size),
 m_mouseOver(false),
+m_mouseEntered(false),
 m_shouldHaveCollider(true),
 m_collider(nullptr),
 m_active(false),
@@ -172,6 +173,8 @@ void BaseObject::HandleInput(float elapsedSeconds, const Vector2& mousePosition)
 	// We should have a collider - if an inherited class is reaching here without a collider, something is wrong
 	assert(m_collider);
 
+  bool prevMouseOver = m_mouseOver;
+
   for (unsigned int mouseButton = static_cast<unsigned int>(MouseButton::kLeftButton); mouseButton < static_cast<unsigned int>(MouseButton::kNumButtons); mouseButton++)
   {
     // Work out whether the mouse is over the object using the collider and mouse in game position
@@ -201,6 +204,8 @@ void BaseObject::HandleInput(float elapsedSeconds, const Vector2& mousePosition)
       m_selected[mouseButton] = false;
     }
   }
+
+  m_mouseEntered = (m_mouseOver && !prevMouseOver);
 }
 
 

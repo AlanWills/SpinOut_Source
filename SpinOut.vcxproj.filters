@@ -202,6 +202,12 @@
     <Filter Include="Header Files\Screens\Splash Screens">
       <UniqueIdentifier>{8afce6e2-baa6-41fc-ab4d-5ee555888b33}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Music">
+      <UniqueIdentifier>{c1bb9229-82bd-469f-a7f1-c9d8bef1c23d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\SFX">
+      <UniqueIdentifier>{354c40e1-bb35-4937-bb03-c961d0acfc11}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -417,6 +423,12 @@
     <ClInclude Include="WaitScript.h">
       <Filter>Header Files\Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="MusicManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="SFXManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -625,6 +637,12 @@
     </ClCompile>
     <ClCompile Include="WaitScript.cpp">
       <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SFXManager.cpp">
+      <Filter>Source Files\Managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1077,6 +1095,12 @@
     <Image Include="Lesson4Thumbnail.png">
       <Filter>Resource Files\Sprites\Racetrack Thumbnails</Filter>
     </Image>
+    <Image Include="FadeOutScreen.png">
+      <Filter>Resource Files\Sprites\Backgrounds</Filter>
+    </Image>
+    <Image Include="SpinOutMainMenuScreen.jpg">
+      <Filter>Resource Files\Sprites\Backgrounds</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="settings.manifest">
@@ -1128,5 +1152,16 @@
     <None Include="Font.spritefont">
       <Filter>Resource Files\Fonts</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Z:\Music\Insert_Coin.wav">
+      <Filter>Resource Files\Music</Filter>
+    </Media>
+    <Media Include="Z:\Music\trance-menu.wav">
+      <Filter>Resource Files\Music</Filter>
+    </Media>
+    <Media Include="ButtonHover.wav">
+      <Filter>Resource Files\SFX</Filter>
+    </Media>
   </ItemGroup>
 </Project>

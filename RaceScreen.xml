@@ -2,4 +2,5 @@
 <Root>
   <DisplayName></DisplayName>
   <BackgroundTextureAsset>GreenBackground.png</BackgroundTextureAsset>
+  <MusicAssets></MusicAssets>
 </Root>
