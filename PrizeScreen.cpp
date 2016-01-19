@@ -7,8 +7,9 @@
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-PrizeScreen::PrizeScreen(ScreenManager* screenManager, const std::string& dataAsset) :
-  BaseScreen(screenManager, dataAsset)
+PrizeScreen::PrizeScreen(const Prizes& prizes, ScreenManager* screenManager, const std::string& dataAsset) :
+  BaseScreen(screenManager, dataAsset),
+  m_prizes(prizes)
 {
 }
 
@@ -31,4 +32,9 @@ void PrizeScreen::AddInitialUI()
 
   Label* infoLabel = new Label(Vector2(0, screenDimensions.y * 0.1f), L"You have won:", congratsLabel);
   AddScreenUIObject(infoLabel);
+
+  for (const Prize& prize : m_prizes)
+  {
+    AddScreenUIObject(new PrizeDescriptionUI(GetDevice(), Vector2(400, 400), GetScreenCentre(), prize));
+  }
 }
