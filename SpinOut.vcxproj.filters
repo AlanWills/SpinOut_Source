@@ -429,6 +429,9 @@
     <ClInclude Include="SFXManager.h">
       <Filter>Header Files\Managers</Filter>
     </ClInclude>
+    <ClInclude Include="PrizeDescriptionUI.h">
+      <Filter>Header Files\UI\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -643,6 +646,9 @@
     </ClCompile>
     <ClCompile Include="SFXManager.cpp">
       <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="PrizeDescriptionUI.cpp">
+      <Filter>Source Files\UI\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

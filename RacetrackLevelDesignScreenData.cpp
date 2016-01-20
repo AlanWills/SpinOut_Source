@@ -18,55 +18,26 @@ RacetrackLevelDesignScreenData::~RacetrackLevelDesignScreenData()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackLevelDesignScreenData::SerializeTrackPoints(const std::list<Vector2>& trackPoints)
 {
-  tinyxml2::XMLDocument* xmlDocument = GetDocument();
-  tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
-  assert(rootElement);
-
-  tinyxml2::XMLElement* lastElement = rootElement->LastChildElement();
-  assert(lastElement);
-
-  tinyxml2::XMLElement* trackPointContainer = xmlDocument->NewElement("TrackPoints");
-  rootElement->InsertAfterChild(lastElement, trackPointContainer);
-
-  tinyxml2::XMLElement* previousTrackPointElement = nullptr;
-
-  for (const Vector2& trackPoint : trackPoints)
-  {
-    tinyxml2::XMLElement* element = xmlDocument->NewElement("TrackPoint");
-    element->SetAttribute("position", trackPoint);
-
-    if (previousTrackPointElement)
-    {
-      trackPointContainer->InsertAfterChild(previousTrackPointElement, element);
-    }
-    else
-    {
-      trackPointContainer->InsertFirstChild(element);
-    }
-
-    previousTrackPointElement = element;
-  }
-
-  xmlDocument->SaveFile(GetDataAsset().c_str());
+  SerializeVectorList(trackPoints, "TrackPoints");
 }
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 void RacetrackLevelDesignScreenData::DeserializeTrackPoints(std::list<Vector2>& trackPoints)
 {
-  assert(ConstGetDocument());
-  const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
-  const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
-  assert(rootElement);
+  DeserializeVectorList(trackPoints, "TrackPoints");
+}
 
-  const tinyxml2::XMLElement* trackPointContainer = rootElement->FirstChildElement("TrackPoints");
-  assert(trackPointContainer);
 
-  for (const tinyxml2::XMLElement* child = trackPointContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
-  {
-    Vector2 trackPoint;
-    child->QueryVector2Attribute("position", &trackPoint);
+//-----------------------------------------------------------------------------------------------------------------------------------
+void RacetrackLevelDesignScreenData::SerializeStartLinePoints(const std::list<Vector2>& startLinePoints)
+{
+  SerializeVectorList(startLinePoints, "StartingLinePoints");
+}
 
-    trackPoints.push_back(trackPoint);
-  }
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+void RacetrackLevelDesignScreenData::DeserializeStartLinePoints(std::list<Vector2>& startLinePoints)
+{
+  DeserializeVectorList(startLinePoints, "StartingLinePoints");
 }

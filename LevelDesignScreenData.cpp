@@ -34,8 +34,11 @@ void LevelDesignScreenData::SerializeLevel(const std::list<LevelDesignObject*>& 
   backgroundTextureAsset->SetText("EmptyBackground.png");
   rootElement->InsertAfterChild(displayNameElement, backgroundTextureAsset);
 
+  tinyxml2::XMLElement* musicContainer = xmlDocument->NewElement("MusicAssets");
+  rootElement->InsertAfterChild(backgroundTextureAsset, musicContainer);
+
   tinyxml2::XMLElement* normalTileContainer = xmlDocument->NewElement("NormalTiles");
-  rootElement->InsertAfterChild(backgroundTextureAsset, normalTileContainer);
+  rootElement->InsertAfterChild(musicContainer, normalTileContainer);
 
   tinyxml2::XMLElement* collisionTileContainer = xmlDocument->NewElement("CollisionTiles");
   rootElement->InsertAfterChild(normalTileContainer, collisionTileContainer);
@@ -157,5 +160,62 @@ void LevelDesignScreenData::DeserializeLevel(std::list<LevelDesignObject*>& leve
   for (const tinyxml2::XMLElement* child = startingPointContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
   {
     levelObjects.push_back(DeserializeLevelObject<LevelDesignStartingPosition>(child));
+  }
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+void LevelDesignScreenData::SerializeVectorList(const std::list<Vector2>& points, const std::string& containerName)
+{
+  tinyxml2::XMLDocument* xmlDocument = GetDocument();
+  tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
+  assert(rootElement);
+
+  tinyxml2::XMLElement* lastElement = rootElement->LastChildElement();
+  assert(lastElement);
+
+  tinyxml2::XMLElement* container = xmlDocument->NewElement(containerName.c_str());
+  rootElement->InsertAfterChild(lastElement, container);
+
+  tinyxml2::XMLElement* previousTrackPointElement = nullptr;
+
+  for (const Vector2& startLinePoint : points)
+  {
+    tinyxml2::XMLElement* element = xmlDocument->NewElement("Item");
+    element->SetAttribute("position", startLinePoint);
+
+    if (previousTrackPointElement)
+    {
+      container->InsertAfterChild(previousTrackPointElement, element);
+    }
+    else
+    {
+      container->InsertFirstChild(element);
+    }
+
+    previousTrackPointElement = element;
+  }
+
+  xmlDocument->SaveFile(GetDataAsset().c_str());
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+void LevelDesignScreenData::DeserializeVectorList(std::list<Vector2>& points, const std::string& containerName)
+{
+  assert(ConstGetDocument());
+  const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
+  const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
+  assert(rootElement);
+
+  const tinyxml2::XMLElement* container = rootElement->FirstChildElement(containerName.c_str());
+  assert(container);
+
+  for (const tinyxml2::XMLElement* child = container->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
+  {
+    Vector2 point;
+    child->QueryVector2Attribute("position", &point);
+
+    points.push_back(point);
   }
 }

@@ -19,6 +19,7 @@ protected:
 
 private:
   std::list<Vector2> m_trackPoints;
+  std::list<Vector2> m_startLinePoints;
 
   /// \brief Pointer to the data class which will be used to serialize the level data
   std::unique_ptr<RacetrackLevelDesignScreenData> m_racetrackLevelData;

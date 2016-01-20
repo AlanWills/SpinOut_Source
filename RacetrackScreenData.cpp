@@ -154,6 +154,31 @@ void RacetrackScreenData::FindTrackPoints(std::vector<Vector2>& trackPoints) con
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+void RacetrackScreenData::FindStartingLinePoints(std::vector<Vector2>& startingLinePoints) const
+{
+  assert(ConstGetDocument());
+  const tinyxml2::XMLDocument* xmlDocument = ConstGetDocument();
+  const tinyxml2::XMLElement* rootElement = xmlDocument->FirstChildElement("Root");
+  assert(rootElement);
+
+  const tinyxml2::XMLElement* trackPointContainer = rootElement->FirstChildElement("StartingLinePoints");
+  assert(trackPointContainer);
+
+  startingLinePoints.reserve(2);
+
+  for (const tinyxml2::XMLElement* child = trackPointContainer->FirstChildElement(); child != nullptr; child = child->NextSiblingElement())
+  {
+    Vector2 startingLinePoint;
+    child->QueryVector2Attribute("position", &startingLinePoint);
+
+    startingLinePoints.push_back(startingLinePoint);
+  }
+
+  assert(startingLinePoints.size() == 0 || startingLinePoints.size() == 2);
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 LevelObjectInfo RacetrackScreenData::DeserializeObject(const tinyxml2::XMLElement* element) const
 {
   LevelObjectInfo info;

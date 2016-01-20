@@ -8,6 +8,8 @@
 #include "PlayerCar.h"
 #include "AICar.h"
 
+#include "Label.h"
+
 #define REGISTER_RACETRACK(name, defaultAsset) \
 protected: \
   name(ScreenManager* screenManager, const std::string& dataAsset = defaultAsset); \
@@ -39,6 +41,7 @@ public:
 
   void LoadContent() override;
   virtual void LoadLevel();
+  void Update(float elapsedSeconds) override;
 
   PlayerCar* GetPlayerCar() const { return m_playerCar; }
 
@@ -52,6 +55,10 @@ protected:
 protected:
   const std::vector<Vector2>& GetTrackPoints() const { return m_trackPoints; }
 
+  bool LapsCompleted() const { return m_lapNumber == m_maxLapNumber; }
+  void SetMaxLapNumber(int maxLapNumber) { m_maxLapNumber = maxLapNumber; }
+  void AddLapNumberLabel(Color colour);
+
 private:
   void AddPlayerCar(PlayerCar* playerCar);
   void AddAICar(AICar* aiCar);
@@ -63,4 +70,12 @@ private:
   std::list<Car*> m_cars;
 
   PlayerCar* m_playerCar;
+
+  int m_lapNumber;
+  int m_maxLapNumber;
+  Label* m_lapNumberLabel;
+
+  UIObject* m_startingLine;
+  // Cached for lap counting only
+  Vector2 m_playerStartingPosition;
 };

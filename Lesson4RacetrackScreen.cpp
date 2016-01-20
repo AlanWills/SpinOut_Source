@@ -3,6 +3,7 @@
 #include "ScreenManager.h"
 #include "RacetrackScreenFactory.h"
 #include "Lesson4RacetrackScreen.h"
+#include "PlayerData.h"
 
 #include "AddTextBoxScript.h"
 #include "WaitForKeyPressScript.h"
@@ -17,6 +18,8 @@ Lesson4RacetrackScreen::Lesson4RacetrackScreen(ScreenManager* screenManager, con
   m_timer(TIME_TO_COMPLETE),
   m_timerLabel(nullptr)
 {
+  SetMaxLapNumber(3);
+  PlayerData::GetInstance().SetCurrentCarAsset("Corvette.xml");
 }
 
 
@@ -34,6 +37,8 @@ void Lesson4RacetrackScreen::AddInitialUI()
   m_timerLabel = new Label(Vector2(GetScreenCentre().x, GetScreenDimensions().y * 0.15f), L"Time Left: " + std::to_wstring(m_timer));
 
   AddScreenUIObject(m_timerLabel);
+
+  AddLapNumberLabel(Color(0, 0, 0, 1));
 }
 
 
@@ -72,6 +77,8 @@ void Lesson4RacetrackScreen::Update(float elapsedSeconds)
       AddScript(new TransitionOnKeyPressScript(
         GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson4RacetrackScreen", Lesson4CheckPoints::kGameplayStart), Keyboard::Keys::NumKeys));
     }
+
+    const Vector2& playerPostPosition = GetPlayerCar()->GetWorldPosition();
   }
 }
 

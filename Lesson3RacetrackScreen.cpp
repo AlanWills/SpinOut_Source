@@ -5,6 +5,8 @@
 #include "ChooseDrivingLessonScreen.h"
 #include "RacetrackScreenFactory.h"
 
+#include "PlayerData.h"
+
 #include "AddTextBoxScript.h"
 #include "TransitionOnKeyPressScript.h"
 
@@ -15,6 +17,7 @@ Lesson3RacetrackScreen::Lesson3RacetrackScreen(ScreenManager* screenManager, con
   m_currentArrow(0),
   m_checkPoint((Lesson3CheckPoints)checkPoint)
 {
+  PlayerData::GetInstance().SetCurrentCarAsset("Corvette.xml");
 }
 
 

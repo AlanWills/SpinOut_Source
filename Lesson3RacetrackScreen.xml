@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
     <DisplayName/>
-    <BackgroundTextureAsset>EmptyBackground.png</BackgroundTextureAsset>
+    <BackgroundTextureAsset>GreenBackground.png</BackgroundTextureAsset>
+    <MusicAssets/>
     <NormalTiles>
         <Item positionx="1152" positiony="640" rotation="0" collider="0">road_asphalt69.png</Item>
         <Item positionx="1280" positiony="640" rotation="0" collider="0">road_asphalt70.png</Item>
@@ -68,6 +69,7 @@
         <TrackPoint positionx="1162.5446" positiony="1566.9863"/>
         <TrackPoint positionx="1390.5446" positiony="1877.653"/>
     </TrackPoints>
+    <StartingLinePoints/>
     <TrackName>Lesson 3</TrackName>
     <ThumbnailAsset>Lesson3Thumbnail.png</ThumbnailAsset>
     <Description>

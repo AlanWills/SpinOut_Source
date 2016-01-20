@@ -21,6 +21,11 @@ public:
   /// \brief Takes an list of level design objects, then loads a level file and deserializes all the elements, populating the list with the resulting level objects
   virtual void DeserializeLevel(std::list<LevelDesignObject*>& levelObjects);
 
+protected:
+  /// \brief Utility functions for serializing specific objects
+  void SerializeVectorList(const std::list<Vector2>& points, const std::string& containerName);
+  void DeserializeVectorList(std::list<Vector2>& points, const std::string& containerName);
+
 private:
   XMLElement* SerializeLevelObject(const LevelDesignObject* levelObject, tinyxml2::XMLDocument* document, tinyxml2::XMLElement* container, XMLElement* previousSibling);
 

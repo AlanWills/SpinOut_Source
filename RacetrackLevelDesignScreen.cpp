@@ -40,7 +40,15 @@ void RacetrackLevelDesignScreen::HandleInput(float elapsedGameTime)
 
     if (gameMouse.IsClicked(MouseButton::kMiddleButton))
     {
-      m_trackPoints.push_back(gameMouse.GetInGamePosition());
+      if (ScreenManager::GetKeyboardInput().IsKeyDown(Keyboard::Keys::LeftShift))
+      {
+        m_startLinePoints.push_back(gameMouse.GetInGamePosition());
+      }
+      else
+      {
+        m_trackPoints.push_back(gameMouse.GetInGamePosition());
+      }
+
       AddInGameUIObject(new UIObject(gameMouse.GetInGamePosition(), "Marker.png"), true, true);
     }
   }
@@ -55,6 +63,7 @@ void RacetrackLevelDesignScreen::SerializeLevel()
 
   m_racetrackLevelData->SerializeLevel(levelObjects);
   m_racetrackLevelData->SerializeTrackPoints(m_trackPoints);
+  m_racetrackLevelData->SerializeStartLinePoints(m_startLinePoints);
 }
 
 
@@ -74,5 +83,12 @@ void RacetrackLevelDesignScreen::DeserializeLevel()
   for (const Vector2& trackPoint : m_trackPoints)
   {
     AddInGameUIObject(new UIObject(trackPoint, "Marker.png"), true, true);
+  }
+
+  m_racetrackLevelData->DeserializeStartLinePoints(m_startLinePoints);
+
+  for (const Vector2& startingLinePoint : m_startLinePoints)
+  {
+    AddInGameUIObject(new UIObject(startingLinePoint, "Marker.png"), true, true);
   }
 }

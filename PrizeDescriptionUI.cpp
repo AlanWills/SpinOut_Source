@@ -24,6 +24,8 @@ PrizeDescriptionUI::~PrizeDescriptionUI()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void PrizeDescriptionUI::AddInitialUI()
 {
+  Menu::AddInitialUI();
+
   float ySpacing = ScreenManager::GetScreenDimensions().y * 0.8f;
 
   Image* prizeImage = new Image(Vector2::Zero, m_prize.m_textureAsset);

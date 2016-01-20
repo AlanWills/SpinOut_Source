@@ -212,6 +212,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PlayerCar.h" />
     <ClInclude Include="PlayerData.h" />
+    <ClInclude Include="PrizeDescriptionUI.h" />
     <ClInclude Include="PrizeScreen.h" />
     <ClInclude Include="RacetrackDescriptionUI.h" />
     <ClInclude Include="RacetrackScreenFactory.h" />
@@ -291,6 +292,7 @@
     </ClCompile>
     <ClCompile Include="PlayerCar.cpp" />
     <ClCompile Include="PlayerData.cpp" />
+    <ClCompile Include="PrizeDescriptionUI.cpp" />
     <ClCompile Include="PrizeScreen.cpp" />
     <ClCompile Include="RacetrackDescriptionUI.cpp" />
     <ClCompile Include="RacetrackScreenFactory.cpp" />

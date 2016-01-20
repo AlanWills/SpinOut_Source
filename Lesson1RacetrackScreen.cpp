@@ -14,6 +14,7 @@ Lesson1RacetrackScreen::Lesson1RacetrackScreen(ScreenManager* screenManager, con
   RacetrackScreen(screenManager, dataAsset),
   m_checkPoint((Lesson1CheckPoints)checkPoint)
 {
+  PlayerData::GetInstance().SetCurrentCarAsset("Corvette.xml");
 }
 
 
@@ -44,7 +45,7 @@ void Lesson1RacetrackScreen::AddInitialScripts()
   AddScript(new CheckLeftAndRightTurnScript(playerCar));
   AddScript(new AddTextBoxScript(L"Great!"));
   AddScript(new AddTextBoxScript(L"That's it for this lesson.\nFeel free to carry on driving,\nor press 'Enter' to go to the next lesson."));
-  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson2RacetrackScreen.xml"), Keyboard::Keys::Enter));
+  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson2RacetrackScreen"), Keyboard::Keys::Enter));
 }
 
 

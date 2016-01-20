@@ -33,6 +33,7 @@ public:
   void FindCollisionDecals(LevelObjects& levelObjects) const;
   void FindStartingPoints(LevelObjects& levelObjects) const;
   void FindTrackPoints(std::vector<Vector2>& trackPoints) const;
+  void FindStartingLinePoints(std::vector<Vector2>& startingLinePoints) const;
 
 private:
   LevelObjectInfo DeserializeObject(const tinyxml2::XMLElement* element) const;

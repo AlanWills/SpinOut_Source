@@ -2,8 +2,9 @@
 
 #include "ScreenManager.h"
 #include "RacetrackScreenFactory.h"
-
 #include "Lesson2RacetrackScreen.h"
+
+#include "PlayerData.h"
 
 #include "TransitionOnKeyPressScript.h"
 
@@ -13,6 +14,7 @@ Lesson2RacetrackScreen::Lesson2RacetrackScreen(ScreenManager* screenManager, con
   m_currentArrow(0),
   m_checkPoint((Lesson2CheckPoints)checkPoint)
 {
+  PlayerData::GetInstance().SetCurrentCarAsset("Corvette.xml");
 }
 
 
@@ -37,7 +39,7 @@ void Lesson2RacetrackScreen::AddInitialScripts()
 
   AddScript(new UpdateArrowsScript(this));
   AddScript(new AddTextBoxScript(L"Well done!\nHit 'Enter' to move to the next lesson."));
-  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson3RacetrackScreen.xml"), Keyboard::Keys::Enter));
+  AddScript(new TransitionOnKeyPressScript(GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson3RacetrackScreen"), Keyboard::Keys::Enter));
 
   CheckCollisionsScript* collisionScript = new CheckCollisionsScript(playerCar);
   AddScript(collisionScript, nullptr);

@@ -8,6 +8,7 @@ MusicManager::MusicManager() :
   m_audioEngine(new AudioEngine()),
   m_currentSong(0)
 {
+  m_audioEngine->SetMasterVolume(0);
 }
 
 
