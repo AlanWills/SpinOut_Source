@@ -6,7 +6,7 @@
 class PrizeScreen : public BaseScreen
 {
 private:
-  typedef std::list<Prize> Prizes;
+  typedef std::vector<Prize> Prizes;
 
 public:
   PrizeScreen(const Prizes& prizes, ScreenManager* screenManager, const std::string& dataAsset = "PrizeScreen.xml");

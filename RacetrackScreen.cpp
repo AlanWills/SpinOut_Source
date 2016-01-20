@@ -239,13 +239,16 @@ void RacetrackScreen::Update(float elapsedSeconds)
         // Do same check for player car to see which direction we have crossed the line
         int playerDirection = m_playerCar->GetWorldPosition().y - m_startingLine->GetWorldPosition().y > 0 ? -1 : 1;
 
-        // If playerDirection is the same as the direction we need to go to properly cross the line we increment our lap number, else we decrement it
-        playerDirection == startDirection ? m_lapNumber++ : m_lapNumber--;
-
-        // Update lap label UI
-        if (m_lapNumberLabel)
+        // If playerDirection is the same as the direction we need to go to properly cross the line we increment our lap number, else we do nothing
+        if (playerDirection == startDirection)
         {
-          m_lapNumberLabel->SetText(L"Lap Number: " + std::to_wstring(m_lapNumber) + L"/" + std::to_wstring(m_maxLapNumber));
+          m_lapNumber++;
+
+          // Update lap label UI
+          if (m_lapNumberLabel)
+          {
+            m_lapNumberLabel->SetText(L"Lap Number: " + std::to_wstring(m_lapNumber) + L"/" + std::to_wstring(m_maxLapNumber));
+          }
         }
       }
     }

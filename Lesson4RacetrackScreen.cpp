@@ -3,6 +3,7 @@
 #include "ScreenManager.h"
 #include "RacetrackScreenFactory.h"
 #include "Lesson4RacetrackScreen.h"
+#include "PrizeScreen.h"
 #include "PlayerData.h"
 
 #include "AddTextBoxScript.h"
@@ -78,7 +79,11 @@ void Lesson4RacetrackScreen::Update(float elapsedSeconds)
         GetScreenManager(), RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), "Lesson4RacetrackScreen", Lesson4CheckPoints::kGameplayStart), Keyboard::Keys::NumKeys));
     }
 
-    const Vector2& playerPostPosition = GetPlayerCar()->GetWorldPosition();
+    if (LapsCompleted())
+    {
+      AddScript(new AddTextBoxScript(L"Congratulations, you have passed the test!"));
+      AddScript(new TransitionOnKeyPressScript(GetScreenManager(), new PrizeScreen(std::vector<Prize>(), GetScreenManager()), Keyboard::Keys::NumKeys));
+    }
   }
 }
 

@@ -40,7 +40,6 @@ void Collider::UpdateCollider()
     break;
   }
 
-  // Set this to null so that we will now update this again this frame
   m_collidedThisFrame = false;
 }
 
