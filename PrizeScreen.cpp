@@ -27,7 +27,7 @@ void PrizeScreen::AddInitialUI()
 
   const Vector2& screenDimensions = ScreenManager::GetScreenDimensions();
 
-  Label* congratsLabel = new Label(Vector2(screenDimensions.x * 0.5f, screenDimensions.y * 0.5f), L"Congratulations!");
+  Label* congratsLabel = new Label(Vector2(screenDimensions.x * 0.5f, screenDimensions.y * 0.2f), L"Congratulations!");
   AddScreenUIObject(congratsLabel);
 
   Label* infoLabel = new Label(Vector2(0, screenDimensions.y * 0.1f), L"You have won:", congratsLabel);

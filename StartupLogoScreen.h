@@ -2,6 +2,8 @@
 
 #include "BaseScreen.h"
 
+#define LOGO_ASSET "Logo.png"
+
 class StartupLogoScreen : public BaseScreen
 {
 public:
@@ -9,5 +11,6 @@ public:
   ~StartupLogoScreen();
 
   void AddInitialScripts() override;
+  void AddInitialUI() override;
 };
 

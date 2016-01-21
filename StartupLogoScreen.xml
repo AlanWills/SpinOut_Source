@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root>
   <DisplayName></DisplayName>
-  <BackgroundTextureAsset>Logo.png</BackgroundTextureAsset>
+  <BackgroundTextureAsset>EmptyBackground.png</BackgroundTextureAsset>
   <MusicAssets/>
 </Root>

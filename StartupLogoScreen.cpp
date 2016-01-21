@@ -6,6 +6,8 @@
 #include "WaitScript.h"
 #include "TransitionOnKeyPressScript.h"
 
+#include "Image.h"
+
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -26,4 +28,13 @@ void StartupLogoScreen::AddInitialScripts()
 {
   AddScript(new WaitScript(3, true));
   AddScript(new TransitionOnKeyPressScript(GetScreenManager(), new MainMenuScreen(GetScreenManager()), Keyboard::Keys::NumKeys));
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+void StartupLogoScreen::AddInitialUI()
+{
+  BaseScreen::AddInitialUI();
+
+  AddScreenUIObject(new Image(GetScreenCentre(), LOGO_ASSET));
 }

@@ -61,7 +61,7 @@ void BaseScreen::LoadContent()
 void BaseScreen::AddInitialUI()
 {
 	// This has to be separate so we can draw it behind all the other objects
-	m_background.reset(new Image(GetScreenCentre(), m_baseScreenData->GetBackgroundAsset()));
+	m_background.reset(new Image(GetScreenDimensions(), GetScreenCentre(), m_baseScreenData->GetBackgroundAsset()));
 	m_background->LoadContent(GetDevice());
   m_background->SetShouldHaveCollider(false);
 
