@@ -38,6 +38,7 @@ void GameMouse::Update(float elapsedSeconds)
 	UIObject::Update(elapsedSeconds);
 
 	// Update mouse states
+  m_previousMouseState = m_currentMouseState;
 	m_currentMouseState = m_mouse->GetState();
 	m_mouseButtonState->Update(m_currentMouseState);
 
@@ -126,6 +127,21 @@ bool GameMouse::IsPressed(MouseButton mouseButton)
 		default:
 			return false;
 	}
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+Vector2 GameMouse::GetDragDelta()
+{
+  return Vector2(m_previousMouseState.x - m_currentMouseState.x, m_previousMouseState.y - m_currentMouseState.y);
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+bool GameMouse::IsDragged(MouseButton mouseButton)
+{
+  // Return whether our mouse button is pressed and the drag delta is non-zero
+  return IsPressed(mouseButton) && GetDragDelta() != Vector2::Zero;
 }
 
 

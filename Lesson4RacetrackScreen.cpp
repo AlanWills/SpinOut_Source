@@ -3,8 +3,9 @@
 #include "ScreenManager.h"
 #include "RacetrackScreenFactory.h"
 #include "Lesson4RacetrackScreen.h"
-#include "PrizeScreen.h"
+
 #include "PlayerData.h"
+#include "CarData.h"
 
 #include "AddTextBoxScript.h"
 #include "WaitForKeyPressScript.h"
@@ -63,6 +64,23 @@ void Lesson4RacetrackScreen::AddInitialScripts()
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+void Lesson4RacetrackScreen::Initialize()
+{
+  RacetrackScreen::Initialize();
+
+  std::unique_ptr<CarData> prizeCarData(new CarData("Corvette.xml"));
+  prizeCarData->LoadData();
+
+  Prize carPrize;
+  carPrize.m_description = prizeCarData->GetDescription();
+  carPrize.m_name = prizeCarData->GetDisplayName();
+  carPrize.m_textureAsset = prizeCarData->GetTextureAsset();
+
+  m_prizes.push_back(carPrize);
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 void Lesson4RacetrackScreen::Update(float elapsedSeconds)
 {
   RacetrackScreen::Update(elapsedSeconds);
@@ -82,7 +100,7 @@ void Lesson4RacetrackScreen::Update(float elapsedSeconds)
     if (LapsCompleted())
     {
       AddScript(new AddTextBoxScript(L"Congratulations, you have passed the test!"));
-      AddScript(new TransitionOnKeyPressScript(GetScreenManager(), new PrizeScreen(std::vector<Prize>(), GetScreenManager()), Keyboard::Keys::NumKeys));
+      AddScript(new TransitionOnKeyPressScript(GetScreenManager(), new PrizeScreen(m_prizes, GetScreenManager()), Keyboard::Keys::NumKeys));
     }
   }
 }

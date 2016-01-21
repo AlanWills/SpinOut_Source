@@ -4,9 +4,9 @@
 
 struct Prize
 {
-  std::wstring m_name;
+  std::string m_name;
   std::string m_textureAsset;
-  std::wstring m_description;
+  std::string m_description;
 };
 
 class PrizeDescriptionUI : public Menu

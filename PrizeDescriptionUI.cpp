@@ -26,14 +26,14 @@ void PrizeDescriptionUI::AddInitialUI()
 {
   Menu::AddInitialUI();
 
-  float ySpacing = ScreenManager::GetScreenDimensions().y * 0.8f;
+  float ySpacing = ScreenManager::GetScreenDimensions().y * 0.08f;
 
   Image* prizeImage = new Image(Vector2::Zero, m_prize.m_textureAsset);
   AddUIObject(prizeImage, true);
 
-  Label* prizeName = new Label(Vector2(0, -prizeImage->GetSize().y * 0.5f - ySpacing), m_prize.m_name, prizeImage);
+  Label* prizeName = new Label(Vector2(0, -prizeImage->GetSize().y * 0.5f - ySpacing), GenericUtils::CharToWChar(m_prize.m_name.c_str()), prizeImage);
   AddUIObject(prizeName);
 
-  Label* prizeDescription = new Label(Vector2(0, prizeImage->GetSize().x * 0.5f), m_prize.m_description, prizeImage);
+  Label* prizeDescription = new Label(Vector2(0, prizeImage->GetSize().x * 0.5f + ySpacing), GenericUtils::CharToWChar(m_prize.m_description.c_str()), prizeImage);
   AddUIObject(prizeDescription);
 }

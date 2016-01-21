@@ -23,7 +23,10 @@ public:
 	/// \param Pass in the appropriate button to find whether it was pressed and released (clicked) or not
 	bool IsClicked(MouseButton mouseButton) { return m_mouseClickStates[static_cast<unsigned int>(mouseButton)]; }
 
+  bool IsDragged(MouseButton mouseButton);
 	bool IsPressed(MouseButton mouseButton);
+
+  Vector2 GetDragDelta();
 
   /// \brief Sets all mouse click states to false
   void Flush();
@@ -36,6 +39,7 @@ private:
 
 	// Hold all the information for the mouse state - can be found in Mouse.h in DirectXTK
 	Mouse::State m_currentMouseState;
+  Mouse::State m_previousMouseState;
 
 	// Array for holding mouse button click state
 	bool m_mouseClickStates[static_cast<unsigned int>(MouseButton::kNumButtons)];

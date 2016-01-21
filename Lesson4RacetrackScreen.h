@@ -2,6 +2,7 @@
 
 #include "RacetrackScreen.h"
 
+#include "PrizeScreen.h"
 #include "Label.h"
 
 class Lesson4RacetrackScreen : public RacetrackScreen
@@ -18,11 +19,14 @@ public:
 
   void AddInitialUI() override;
   void AddInitialScripts() override;
+  void Initialize() override;
   void Update(float elapsedTestSeconds) override;
 
 private:
   float m_timer;
   Label* m_timerLabel;
+  
+  std::vector<Prize> m_prizes;
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
