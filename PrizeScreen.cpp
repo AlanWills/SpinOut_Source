@@ -25,6 +25,9 @@ void PrizeScreen::AddInitialUI()
 {
   BaseScreen::AddInitialUI();
 
+  m_prizeDescriptionUIContainer = new DescriptionUIContainer(GetDevice());
+  AddScreenUIObject(m_prizeDescriptionUIContainer);
+
   const Vector2& screenDimensions = ScreenManager::GetScreenDimensions();
 
   Label* congratsLabel = new Label(Vector2(screenDimensions.x * 0.5f, screenDimensions.y * 0.15f), L"Congratulations!");
@@ -35,6 +38,7 @@ void PrizeScreen::AddInitialUI()
 
   for (const Prize& prize : m_prizes)
   {
-    AddScreenUIObject(new PrizeDescriptionUI(GetDevice(), GetScreenCentre(), GetScreenCentre(), prize));
+    PrizeDescriptionUI* prizeDescriptionUI = new PrizeDescriptionUI(GetDevice(), prize);
+    m_prizeDescriptionUIContainer->AddDescriptionUI(prizeDescriptionUI);
   }
 }

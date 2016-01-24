@@ -6,8 +6,8 @@
 class Menu : public UIObject
 {
 public:
-	Menu(ID3D11Device* device, const Vector2& localPosition, const std::string& dataAsset, LoadType loadType = LoadType::kTexture, BaseObject* parent = nullptr, float lifeTime = FLT_MAX);
-	Menu(ID3D11Device* device, const Vector2& size, const Vector2& localPosition, const std::string& dataAsset, LoadType loadType = LoadType::kTexture, BaseObject* parent = nullptr, float lifeTime = FLT_MAX);
+	Menu(ID3D11Device* device, const Vector2& localPosition, const std::string& dataAsset = "", LoadType loadType = LoadType::kNoLoad, BaseObject* parent = nullptr, float lifeTime = FLT_MAX);
+	Menu(ID3D11Device* device, const Vector2& size, const Vector2& localPosition, const std::string& dataAsset = "", LoadType loadType = LoadType::kNoLoad, BaseObject* parent = nullptr, float lifeTime = FLT_MAX);
 	~Menu();
 
 	void LoadContent(ID3D11Device* device) override;

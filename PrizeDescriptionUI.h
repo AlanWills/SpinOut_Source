@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Menu.h"
+#include "DescriptionUI.h"
 
 struct Prize
 {
@@ -9,10 +9,10 @@ struct Prize
   std::string m_description;
 };
 
-class PrizeDescriptionUI : public Menu
+class PrizeDescriptionUI : public DescriptionUI
 {
 public:
-  PrizeDescriptionUI(ID3D11Device* device, const Vector2& size, const Vector2& position, const Prize& prize);
+  PrizeDescriptionUI(ID3D11Device* device, const Prize& prize);
   ~PrizeDescriptionUI();
 
   void AddInitialUI() override;

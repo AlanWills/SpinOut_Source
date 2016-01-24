@@ -432,6 +432,12 @@
     <ClInclude Include="PrizeDescriptionUI.h">
       <Filter>Header Files\UI\Game</Filter>
     </ClInclude>
+    <ClInclude Include="DescriptionUIContainer.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptionUI.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -575,9 +581,6 @@
     <ClCompile Include="Label.cpp">
       <Filter>Source Files\UI\Generic</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Source Files\UI\Generic</Filter>
-    </ClCompile>
     <ClCompile Include="RacetrackDescriptionUI.cpp">
       <Filter>Source Files\UI\Game</Filter>
     </ClCompile>
@@ -649,6 +652,15 @@
     </ClCompile>
     <ClCompile Include="PrizeDescriptionUI.cpp">
       <Filter>Source Files\UI\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="DescriptionUIContainer.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="DescriptionUI.cpp">
+      <Filter>Source Files\UI\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Header Files\UI\Generic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,17 +1,17 @@
 #include "pch.h"
 
-#include "HUD.h"
+#include "DescriptionUI.h"
 #include "ScreenManager.h"
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-HUD::HUD(ID3D11Device* device) :
-  Menu(device, ScreenManager::GetScreenDimensions(), ScreenManager::GetScreenCentre())
+DescriptionUI::DescriptionUI(ID3D11Device* device) :
+  Menu(device, ScreenManager::GetScreenDimensions(), Vector2::Zero)
 {
 }
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-HUD::~HUD()
+DescriptionUI::~DescriptionUI()
 {
 }

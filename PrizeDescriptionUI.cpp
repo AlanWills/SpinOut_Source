@@ -8,8 +8,8 @@
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-PrizeDescriptionUI::PrizeDescriptionUI(ID3D11Device* device, const Vector2& size, const Vector2& position, const Prize& prize) :
-  Menu(device, size, position, "", LoadType::kNoLoad),
+PrizeDescriptionUI::PrizeDescriptionUI(ID3D11Device* device, const Prize& prize) :
+  DescriptionUI(device),
   m_prize(prize)
 {
 }
@@ -24,7 +24,7 @@ PrizeDescriptionUI::~PrizeDescriptionUI()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void PrizeDescriptionUI::AddInitialUI()
 {
-  Menu::AddInitialUI();
+  DescriptionUI::AddInitialUI();
 
   float ySpacing = ScreenManager::GetScreenDimensions().y * 0.08f;
 

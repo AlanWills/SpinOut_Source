@@ -2,6 +2,7 @@
 
 #include "BaseScreen.h"
 #include "PrizeDescriptionUI.h"
+#include "DescriptionUIContainer.h"
 
 class PrizeScreen : public BaseScreen
 {
@@ -16,5 +17,7 @@ public:
 
 private:
   Prizes m_prizes;
+
+  DescriptionUIContainer* m_prizeDescriptionUIContainer;
 };
 

@@ -182,6 +182,8 @@
     <ClInclude Include="ClickableImage.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="ChooseDrivingLessonScreen.h" />
+    <ClInclude Include="DescriptionUI.h" />
+    <ClInclude Include="DescriptionUIContainer.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameMouse.h" />
     <ClInclude Include="GameObject.h" />
@@ -257,6 +259,8 @@
     <ClCompile Include="ClickableImage.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="ChooseDrivingLessonScreen.cpp" />
+    <ClCompile Include="DescriptionUI.cpp" />
+    <ClCompile Include="DescriptionUIContainer.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameMouse.cpp" />
     <ClCompile Include="GameObject.cpp" />

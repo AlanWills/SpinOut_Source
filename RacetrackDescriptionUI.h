@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Menu.h"
+#include "DescriptionUI.h"
 
 #include "RacetrackScreenData.h"
 
-class RacetrackDescriptionUI : public Menu
+class RacetrackDescriptionUI : public DescriptionUI
 {
 public:
   RacetrackDescriptionUI(ID3D11Device* device, const std::string& racetrackScreenDataAsset);

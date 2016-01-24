@@ -9,7 +9,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 RacetrackDescriptionUI::RacetrackDescriptionUI(ID3D11Device* device, const std::string& racetrackScreenDataAsset) :
-  Menu(device, ScreenManager::GetScreenDimensions(), ScreenManager::GetScreenCentre(), "", LoadType::kNoLoad),
+  DescriptionUI(device),
   m_racetrackScreenData(new RacetrackScreenData(racetrackScreenDataAsset))
 {
 }
@@ -27,7 +27,7 @@ void RacetrackDescriptionUI::LoadContent(ID3D11Device* device)
   // MUST be called in this order because we need the data when we call AddInitialUI, which happens during Menu::LoadContent(device)
   m_racetrackScreenData->LoadData();
 
-  Menu::LoadContent(device);
+  DescriptionUI::LoadContent(device);
 }
 
 

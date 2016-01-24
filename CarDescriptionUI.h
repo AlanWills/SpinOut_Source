@@ -2,9 +2,9 @@
 
 #include "CarData.h"
 
-#include "Menu.h"
+#include "DescriptionUI.h"
 
-class CarDescriptionUI : public Menu
+class CarDescriptionUI : public DescriptionUI
 {
 public:
   CarDescriptionUI(ID3D11Device* device, const std::string& carDataAsset);

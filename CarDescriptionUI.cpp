@@ -9,7 +9,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 CarDescriptionUI::CarDescriptionUI(ID3D11Device* device, const std::string& carDataAsset) :
-  Menu(device, ScreenManager::GetScreenDimensions(), Vector2(ScreenManager::GetScreenCentre().x, ScreenManager::GetScreenCentre().y * 0.5f), "", LoadType::kNoLoad),
+  DescriptionUI(device),
   m_carData(new CarData(carDataAsset))
 {
 }
@@ -27,7 +27,7 @@ void CarDescriptionUI::LoadContent(ID3D11Device* device)
   // Must be called in this order
   m_carData->LoadData();
 
-  Menu::LoadContent(device);
+  DescriptionUI::LoadContent(device);
 }
 
 

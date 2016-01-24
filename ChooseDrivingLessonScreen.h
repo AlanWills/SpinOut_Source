@@ -3,6 +3,7 @@
 #include "MenuScreen.h"
 
 #include "RacetrackScreenData.h"
+#include "DescriptionUIContainer.h"
 #include "RacetrackDescriptionUI.h"
 
 class ChooseDrivingLessonScreen : public MenuScreen
@@ -12,18 +13,14 @@ public:
   ~ChooseDrivingLessonScreen();
 
   void AddInitialUI() override;
-  void Initialize() override;
-  void HandleInput(float elapsedGameTime) override;
 
 private:
-  typedef std::pair<std::string, RacetrackDescriptionUI*> Lesson;
-  typedef std::vector<Lesson> Lessons;
+  typedef std::pair<std::string, std::string> LessonNameAndFile;
+  typedef std::vector<LessonNameAndFile> LessonNames;
 
-  void ShowCurrentLessonUI();
-
-  // Our current selected lesson
-  size_t m_currentLesson;
+  // Our lesson UI container
+  DescriptionUIContainer* m_racetrackDescriptionContainer;
 
   // Map which holds the data asset for the level and the appropriate UI
-  Lessons m_lessons;
+  LessonNames m_lessons;
 };

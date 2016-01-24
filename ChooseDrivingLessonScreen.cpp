@@ -14,14 +14,14 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 ChooseDrivingLessonScreen::ChooseDrivingLessonScreen(ScreenManager* screenManager, const std::string& dataAsset) :
   MenuScreen(screenManager, dataAsset),
-  m_currentLesson(PlayerData::GetInstance().GetCurrentLicenseLevel())
+  m_racetrackDescriptionContainer(nullptr)
 {
   SetPreviousScreen(new MainMenuScreen(GetScreenManager()));
 
-  m_lessons.push_back(Lesson("Lesson1RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson1RacetrackScreen.xml")));
-  m_lessons.push_back(Lesson("Lesson2RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson2RacetrackScreen.xml")));
-  m_lessons.push_back(Lesson("Lesson3RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson3RacetrackScreen.xml")));
-  m_lessons.push_back(Lesson("Lesson4RacetrackScreen", new RacetrackDescriptionUI(GetDevice(), "Lesson4RacetrackScreen.xml")));
+  m_lessons.push_back(LessonNameAndFile("Lesson1RacetrackScreen", "Lesson1RacetrackScreen.xml"));
+  m_lessons.push_back(LessonNameAndFile("Lesson2RacetrackScreen", "Lesson2RacetrackScreen.xml"));
+  m_lessons.push_back(LessonNameAndFile("Lesson3RacetrackScreen", "Lesson3RacetrackScreen.xml"));
+  m_lessons.push_back(LessonNameAndFile("Lesson4RacetrackScreen", "Lesson4RacetrackScreen.xml"));
 }
 
 
@@ -36,71 +36,20 @@ void ChooseDrivingLessonScreen::AddInitialUI()
 {
   MenuScreen::AddInitialUI();
 
-  for (const Lesson& lesson : m_lessons)
-  {
-    assert(lesson.second);
+  m_racetrackDescriptionContainer = new DescriptionUIContainer(GetDevice(), PlayerData::GetInstance().GetCurrentLicenseLevel());
+  AddScreenUIObject(m_racetrackDescriptionContainer);
 
-    AddScreenUIObject(lesson.second);
+  for (size_t index = 0, licenseLevel = PlayerData::GetInstance().GetCurrentLicenseLevel(); index <= licenseLevel; index++)
+  {
+    RacetrackDescriptionUI* racetrackUI = new RacetrackDescriptionUI(GetDevice(), m_lessons[index].second);
+    m_racetrackDescriptionContainer->AddDescriptionUI(racetrackUI);
   }
 
   Button* playButton = new Button(Vector2(GetScreenCentre().x, GetScreenDimensions().y * 0.9f), L"Go Race");
   playButton->SetClickFunction([this]()
   {
-    Transition(RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), m_lessons[m_currentLesson].first));
+    std::string racetrackName(m_lessons[m_racetrackDescriptionContainer->GetCurrentUIIndex()].first);
+    Transition(RacetrackScreenFactory::CreateRacetrack(GetScreenManager(), racetrackName));
   });
   AddScreenUIObject(playButton);
-}
-
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-void ChooseDrivingLessonScreen::Initialize()
-{
-  MenuScreen::Initialize();
-
-  ShowCurrentLessonUI();
-}
-
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-void ChooseDrivingLessonScreen::HandleInput(float elapsedGameTime)
-{
-  MenuScreen::HandleInput(elapsedGameTime);
-
-  if (AcceptsInput())
-  {
-    const KeyboardInput& keyboard = ScreenManager::GetKeyboardInput();
-
-    if (keyboard.IsKeyPressed(Keyboard::Keys::Left))
-    {
-      if (m_currentLesson != 0)
-      {
-        m_currentLesson--;
-
-        // Hide the other level UIs
-        ShowCurrentLessonUI();
-      }
-    }
-    
-    if (keyboard.IsKeyPressed(Keyboard::Keys::Right))
-    {
-      if (m_currentLesson < min(PlayerData::GetInstance().GetCurrentLicenseLevel(), m_lessons.size() - 1))
-      {
-        m_currentLesson++;
-
-        // Hide the other level UIs
-        ShowCurrentLessonUI();
-      }
-    }
-  }
-}
-
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-void ChooseDrivingLessonScreen::ShowCurrentLessonUI()
-{
-  for (size_t i = 0; i < m_lessons.size(); i++)
-  {
-    // Set it's visibility based on whether it is the current selected lesson
-    m_lessons[i].second->SetVisible(i == m_currentLesson);
-  }
 }
