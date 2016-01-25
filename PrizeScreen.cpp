@@ -2,6 +2,7 @@
 
 #include "ScreenManager.h"
 #include "PrizeScreen.h"
+#include "PlayerData.h"
 
 #include "Label.h"
 
@@ -40,5 +41,16 @@ void PrizeScreen::AddInitialUI()
   {
     PrizeDescriptionUI* prizeDescriptionUI = new PrizeDescriptionUI(GetDevice(), prize);
     m_prizeDescriptionUIContainer->AddDescriptionUI(prizeDescriptionUI);
+
+    switch (prize.m_type)
+    {
+      case kLicenseLevel:
+        PlayerData::GetInstance().SetCurrentLicenseLevel(prize.m_data);
+        break;
+
+      case kCar:
+        PlayerData::GetInstance().AddCarAsset(prize.m_asset);
+        break;
+    }
   }
 }

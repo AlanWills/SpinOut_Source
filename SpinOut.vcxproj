@@ -207,7 +207,7 @@
     <ClInclude Include="LoadingScreen.h" />
     <ClInclude Include="MainMenuScreen.h" />
     <ClInclude Include="MathUtils.h" />
-    <ClInclude Include="Menu.h" />
+    <ClInclude Include="UIPanel.h" />
     <ClInclude Include="MenuScreen.h" />
     <ClInclude Include="MouseButton.h" />
     <ClInclude Include="MusicManager.h" />
@@ -285,7 +285,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenuScreen.cpp" />
     <ClCompile Include="MathUtils.cpp" />
-    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="UIPanel.cpp" />
     <ClCompile Include="MenuScreen.cpp" />
     <ClCompile Include="MusicManager.cpp" />
     <ClCompile Include="pch.cpp">

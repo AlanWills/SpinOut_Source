@@ -71,10 +71,19 @@ void Lesson4RacetrackScreen::Initialize()
   std::unique_ptr<CarData> prizeCarData(new CarData("Corvette.xml"));
   prizeCarData->LoadData();
 
+  Prize licensePrize;
+  licensePrize.m_description = "Now you can compete in races which require a Level 1 License!";
+  licensePrize.m_type = kLicenseLevel;
+  licensePrize.m_name = "Level 1 License";
+  licensePrize.m_asset = "Logo.png";
+
+  m_prizes.push_back(licensePrize);
+
   Prize carPrize;
   carPrize.m_description = prizeCarData->GetDescription();
+  carPrize.m_type = kCar;
   carPrize.m_name = prizeCarData->GetDisplayName();
-  carPrize.m_textureAsset = prizeCarData->GetTextureAsset();
+  carPrize.m_asset = prizeCarData->GetTextureAsset();
 
   m_prizes.push_back(carPrize);
 }

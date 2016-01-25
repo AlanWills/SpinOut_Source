@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Menu.h"
+#include "UIPanel.h"
 #include "DescriptionUI.h"
 
-class DescriptionUIContainer : public Menu
+class DescriptionUIContainer : public UIPanel
 {
 public:
   DescriptionUIContainer(ID3D11Device* device, int selectedIndex = 0);

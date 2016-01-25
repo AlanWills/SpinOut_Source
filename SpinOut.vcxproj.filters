@@ -357,9 +357,6 @@
     <ClInclude Include="Label.h">
       <Filter>Header Files\UI\Generic</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Header Files\UI\Generic</Filter>
-    </ClInclude>
     <ClInclude Include="RacetrackDescriptionUI.h">
       <Filter>Header Files\UI\Game</Filter>
     </ClInclude>
@@ -436,6 +433,9 @@
       <Filter>Header Files\UI\Generic</Filter>
     </ClInclude>
     <ClInclude Include="DescriptionUI.h">
+      <Filter>Header Files\UI\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="UIPanel.h">
       <Filter>Header Files\UI\Generic</Filter>
     </ClInclude>
   </ItemGroup>
@@ -659,7 +659,7 @@
     <ClCompile Include="DescriptionUI.cpp">
       <Filter>Source Files\UI\Generic</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="UIPanel.cpp">
       <Filter>Header Files\UI\Generic</Filter>
     </ClCompile>
   </ItemGroup>

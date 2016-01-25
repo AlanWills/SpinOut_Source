@@ -2,11 +2,19 @@
 
 #include "DescriptionUI.h"
 
+enum PrizeType
+{
+  kCar,
+  kLicenseLevel
+};
+
 struct Prize
 {
   std::string m_name;
-  std::string m_textureAsset;
+  PrizeType m_type;
+  std::string m_asset;
   std::string m_description;
+  int m_data;
 };
 
 class PrizeDescriptionUI : public DescriptionUI

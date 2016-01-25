@@ -6,7 +6,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 HUD::HUD(ID3D11Device* device) :
-  Menu(device, ScreenManager::GetScreenDimensions(), ScreenManager::GetScreenCentre())
+  UIPanel(device, ScreenManager::GetScreenDimensions(), ScreenManager::GetScreenCentre())
 {
 }
 

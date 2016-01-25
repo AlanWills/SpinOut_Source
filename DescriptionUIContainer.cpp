@@ -6,7 +6,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 DescriptionUIContainer::DescriptionUIContainer(ID3D11Device* device, int selectedIndex) :
-  Menu(device, ScreenManager::GetScreenCentre(), "", LoadType::kNoLoad),
+  UIPanel(device, ScreenManager::GetScreenCentre(), "", LoadType::kNoLoad),
   m_currentUIIndex(selectedIndex)
 {
 }
@@ -21,7 +21,7 @@ DescriptionUIContainer::~DescriptionUIContainer()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void DescriptionUIContainer::Initialize()
 {
-  Menu::Initialize();
+  UIPanel::Initialize();
 
   HideAllButCurrent();
 }
@@ -30,7 +30,7 @@ void DescriptionUIContainer::Initialize()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void DescriptionUIContainer::HandleInput(float elapsedSeconds, const Vector2& mousePosition)
 {
-  Menu::HandleInput(elapsedSeconds, mousePosition);
+  UIPanel::HandleInput(elapsedSeconds, mousePosition);
 
   if (AcceptsInput())
   {

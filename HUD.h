@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Menu.h"
+#include "UIPanel.h"
 
-class HUD : public Menu
+class HUD : public UIPanel
 {
 public:
   HUD(ID3D11Device* device);

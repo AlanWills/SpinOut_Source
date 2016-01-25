@@ -28,7 +28,7 @@ void PrizeDescriptionUI::AddInitialUI()
 
   float ySpacing = ScreenManager::GetScreenDimensions().y * 0.08f;
 
-  Image* prizeImage = new Image(Vector2::Zero, m_prize.m_textureAsset);
+  Image* prizeImage = new Image(Vector2::Zero, m_prize.m_asset);
   AddUIObject(prizeImage, true);
 
   Label* prizeName = new Label(Vector2(0, -prizeImage->GetSize().y * 0.5f - ySpacing), GenericUtils::CharToWChar(m_prize.m_name.c_str()), prizeImage);

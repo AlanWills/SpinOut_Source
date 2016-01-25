@@ -6,7 +6,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 DescriptionUI::DescriptionUI(ID3D11Device* device) :
-  Menu(device, ScreenManager::GetScreenDimensions(), Vector2::Zero)
+  UIPanel(device, ScreenManager::GetScreenDimensions(), Vector2::Zero)
 {
 }
 
